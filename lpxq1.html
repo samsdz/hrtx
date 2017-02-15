@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页</title>
+<link rel="stylesheet" href="css/reset.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/lpxq1.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/lpxq1.js"></script>
+<script src="js/Validform_v5.3.2_min.js"></script>
+<script src="js/jquery.vticker.min.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+<style>
+.Validform_checktip { margin-left: 8px; line-height: 20px; height: 20px; overflow: hidden; color: #999; font-size: 12px; }
+.Validform_right { color: #71b83d; padding-left: 20px; background: url(images/formImg/right.png) no-repeat left center; }
+.Validform_wrong { color: red; padding-left: 20px; white-space: nowrap; background: url(images/formImg/error.png) no-repeat left center; }
+.Validform_loading { padding-left: 20px; background: url(images/formImg/onLoad.gif) no-repeat left center; }
+.Validform_error { }
+#Validform_msg { color: #7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width: 280px; -webkit-box-shadow: 2px 2px 3px #aaa; -moz-box-shadow: 2px 2px 3px #aaa; background: #fff; position: absolute; top: 0px; right: 50px; z- index:99999;
+display: none; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe { position: absolute; left: 0px; top: -1px; z-index: -1; }
+#Validform_msg .Validform_title { line-height: 25px; height: 25px; text-align: left; font-weight: bold; padding: 0 8px; color: #fff; position: relative; background-color: #000; }
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited { line-height: 22px; position: absolute; right: 8px; top: 0px; color: #fff; text-decoration: none; }
+#Validform_msg a.Validform_close:hover { color: #cc0; }
+#Validform_msg .Validform_info { padding: 8px; border: 1px solid #000; border-top: none; text-align: left; }
+</style>
+</head>
+<body>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!---------------------------------------------------------------------------->
+<div class="nav">
+  <div class="row">
+    <div class="contaier1248">
+      <ul>
+        <a href="/" class="s_logo"><img src="images/fc1/logo.jpg" /></a>
+        <li><a href="http://192.168.1.21:8001/2.0/" class="s_subs ">首页</a></li>
+        <li><a href="#" class="s_sub">精选项目 <i class="fa fa-caret-down"></i></a></li>
+        <li><a href="http://192.168.1.21:8001/2.0/yimin.html" class="s_subs">评估方案</a></li>
+        <li><a href="#" class="s_subs">安全保障</a></li>
+        <li><a href="#" class="s_subs">找机构</a></li>
+        <li><a href="#" class="s_subs">活动沙龙</a></li>
+        <li><a href="#" class="s_subs">焦点话题</a></li>
+      </ul>
+      <div class="s_subnav" style="display:none;">
+        <div class="s_subnavcon">
+          <div class="s_subnavhead">
+            <div class="s_subnavtitle1 s_bottomOn"> <img src="images/f22.jpg" />
+              <p>海外房产</p>
+            </div>
+            <div class="s_subnavtitle2"> <img src="images/f33.jpg" />
+              <p>投资移民</p>
+            </div>
+            <div class="s_subnavtitle3"> <img src="images/f11.jpg" />
+              <p>海外留学</p>
+            </div>
+          </div>
+          <div class="s_subnavfoot">
+            <div class="s_subnavfoot1" style="display:;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外房产</p>
+                <p class="s_navfootlp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f2.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot2" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">投资移民</p>
+                <p class="s_navfootlp2">精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之路保驾护航。精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之精选全国40多家移民机构100余项目。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f3.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot3" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外留学</p>
+                <p class="s_navfootlp2">网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f1.jpg" /> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!---------------------------------------------------------------------------->
+<div class="s_head">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_head1"></div>
+      <div class="s_head2">
+        <div class="s_headl"> <a href="#">精选房源</a><span>></span><a href="#">新加坡房源</a><span>></span><a href="#">20邮区</a><span>></span><a href="#">Sky Habitat （晴宇）</a> </div>
+        <div class="s_headc">
+          <form class="demoform">
+            <div class="s_search">
+              <div class="s_searchl"> <a href="javascript:void(0)" class=""> <span> <em>全部</em> <i class="fa fa-caret-down"></i></span> </a>
+                <ul style="display:none;">
+                  <li><a href="javascript:void(0)">房产</a></li>
+                  <li><a href="javascript:void(0)">留学</a></li>
+                  <li><a href="javascript:void(0)">移民</a></li>
+                  <li><a href="javascript:void(0)">资讯</a></li>
+                  <li><a href="javascript:void(0)">问答</a></li>
+                  <li><a href="javascript:void(0)">方案</a></li>
+                </ul>
+                <select style="display:none;">
+                  <option>全部</option>
+                  <option>房产</option>
+                  <option>留学</option>
+                  <option>移民</option>
+                  <option>资讯</option>
+                  <option>问答</option>
+                  <option>方案</option>
+                </select>
+              </div>
+              <div class="s_searchc">
+                <input type="text" placeholder="搜索关键词..." datatype="*1-15">
+              </div>
+              <div class="s_searchr">
+                <input type="submit" value="搜索" >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="s_bigTitB">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_bigTit">
+        <div class="s_bigTitC">
+          <div class="s_bigTit1"> <img src="images/fc1/12.jpg" /> </div>
+          <div class="s_bigTit2">
+            <p><a href="#">Sky Habitat （晴宇）</a></p>
+            <div>学区房</div>
+            <div>地铁房</div>
+            <div>繁华商圈</div>
+          </div>
+          <div class="s_bigTit4"> <img src="images/fc1/11.jpg" /> </div>
+          <div class="s_bigTit3">
+            <p class="s_bigTit31">扫一扫</p>
+            <p>立刻访问移动端页面</p>
+          </div>
+        </div>
+      </div>
+      <div class="s_bigNav">
+        <ul>
+          <li><a href="#">楼盘首页</a></li>
+          <li><a href="#">楼盘详情</a></li>
+          <li><a href="#">楼盘相册</a></li>
+          <li><a href="#">价格走势</a></li>
+          <li><a href="#">全景图</a></li>
+          <li><a href="#">周边配套</a></li>
+          <li><a href="#">楼盘动态</a></li>
+          <li><a href="#" class="s_on">楼盘点评</a></li>
+          <li><a href="#">论坛</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+
+
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_2L">
+      <div class="s_title">
+        <img src="images/lpxq1/3.jpg" /><span class="s_span1">基本信息</span> 
+        <span class="s_span2">楼盘咨询：400-998-299  转 001</span>
+       </div>
+       <div class="s_jbxx">
+       	<div class="s_jbxxBox">
+        	<table>
+                  
+
+            	<tr>
+                	<td class="s_t1">地理位置</td>
+                    <td class="s_t2">新加坡第20邮区碧山15街</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">物业类型</td>
+                    <td class="s_t2">公寓</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">物业产权</td>
+                    <td class="s_t2">永久产权</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">开发商</td>
+                    <td class="s_t2">凯德新加坡</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">户型</td>
+                    <td class="s_t2">一房（66㎡-70㎡  ）、两房（81㎡-98㎡）、三房（113㎡-130㎡）</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">总套数</td>
+                    <td class="s_t2">509套</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">停车位</td>
+                    <td class="s_t2">509个</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">装修情况</td>
+                    <td class="s_t2">精装修</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">占地面积</td>
+                    <td class="s_t2">11997㎡</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">绿化率</td>
+                    <td class="s_t2">暂无数据</td>
+                </tr>
+            </table>
+        </div>
+       </div>
+       
+       <div class="s_title">
+        <img src="images/lpxq1/1.jpg" /><span class="s_span1">在售信息</span> 
+       
+       </div>
+       <div class="s_jbxx">
+       	<div class="s_jbxxBox">
+        	<table>
+                  
+
+            	<tr>
+                	<td class="s_t1">开盘日期</td>
+                    <td class="s_t2">2014年5月</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">预计完工</td>
+                    <td class="s_t2">2016年2月</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">法定完工</td>
+                    <td class="s_t2">2016年低</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">价格</td>
+                    <td class="s_t2">最低  ￥8万/㎡</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">物业费</td>
+                    <td class="s_t2">3.8元/平方/月</td>
+                </tr>
+                
+            </table>
+        </div>
+       </div>
+       
+       
+       <div class="s_title">
+        <img src="images/lpxq1/2.jpg" /><span class="s_span1">交通信息</span> 
+       
+       </div>
+       <div class="s_jbxx">
+       	<div class="s_jbxxBox">
+        	<table>
+                  
+
+            	<tr>
+                	<td class="s_t1">地铁站</td>
+                    <td class="s_t2">碧山地铁转换站</td>
+                </tr>
+                <tr>
+                	<td class="s_t1">公交站</td>
+                    <td class="s_t2">碧山巴士转换站</td>
+                </tr>
+                
+                
+            </table>
+        </div>
+       </div>
+       
+       
+        <div class="s_title">
+        <img src="images/lpxq1/1.jpg" /><span class="s_span1">楼盘简介</span> 
+       
+       </div>
+       <div class="s_jbxx">
+       	<div class="s_jbxxBox">
+        	<table>
+                 <tr>
+                 	<td class="s_t5">&nbsp;</td>
+                    <td class="s_t5">&nbsp;</td>
+                 </tr> 
+
+            	<tr>
+                	<td class="s_t3"><a href="#"><img src="images/lpxq1/7.jpg" /></a></td>
+                    <td class="s_t4">
+                    	<p class="s_t4p0">SkyHabitat（晴宇）位于新加坡最好的居住区之一——碧山15街，是由凯德新加坡和三菱地产(亚洲)、清水建设联合开发的一个项目。项目由两座高38层的塔楼组成，两座塔楼用三座步行天桥花园连接，共包括509个单位，占地面积为11997平方米，拥有2层地下停车场和众多的公共设施。项目的产权为99年。</p>
+                    </td>
+                </tr>
+                <tr>
+                	<td class="s_t3"><a href="#"><img src="images/lpxq1/6.jpg" /></a></td>
+                    <td class="s_t4">
+                    	<p class="s_t4p1">新加坡碧山-萨夫迪最新住宅设计作品</p>
+                    	<p class="s_t4p2">这项即将推出的新项目，新加坡未来的新地标是由世界顶级建筑师，萨夫迪(Moshe Safdie)所设计。这设计独特的住宅项目是由2栋38层楼，509户天台家园打招而成。晴宇(Sky Habitat)顾名思义，让您更贴近天空与大自然。无遮挡的露台更是让您享有无拘束的栖息与思考空间。</p>
+                    </td>
+                </tr>
+                
+                
+            </table>
+        </div>
+       </div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+    </div>
+    <div class="s_2R">
+    
+      <div class="s_2R1">
+     	<a href="#">免费通话</a> 
+
+      </div>
+      
+        <div class="s_2R9">
+       
+        <form>
+       <input type="text">
+        <input type="tel">
+        <input type="email">
+        <button type="submit">提交报名</button>
+        </form>
+        
+     	
+
+      </div>
+      
+      
+      <div class="s_2R2">
+        <div class="s_2R21">新加坡购房相关费用</div>
+        <div class="s_2R22">交易费用</div>
+        <table>
+        	<tr>
+            	<td class="s_t6">印花税</td>
+                <td class="s_t7">外国人18% （2013.12实施）</td>
+            </tr>
+            <tr>
+            	<td class="s_t6">律师费</td>
+                <td class="s_t7">2000-3000新币</td>
+            </tr>
+        </table>
+        <div class="s_2R22">贷款费用</div>
+        <table>
+        	<tr>
+            	<td class="s_t6">首付款</td>
+                <td class="s_t7">30%以上</td>
+            </tr>
+            <tr>
+            	<td class="s_t6">贷款费用</td>
+                <td class="s_t7">视情况而定</td>
+            </tr>
+        </table>
+        <div class="s_2R22">持有费用</div>
+        <table>
+        	<tr>
+            	<td class="s_t6">物业费</td>
+                <td class="s_t7">一般100-300新币</td>
+            </tr>
+            <tr>
+            	<td class="s_t6">地税</td>
+                <td class="s_t7">年租金4%或10%（非自住）</td>
+            </tr>
+            <tr>
+            	<td class="s_t6">出租税</td>
+                <td class="s_t7">2万新币/年起征</td>
+            </tr>
+        </table>
+        <div class="s_2R22">转让费用</div>
+        <table>
+        	<tr>
+            	<td class="s_t6">所得税</td>
+                <td class="s_t7">其中第一年税率：16%<br />第二年：12%<br />第三年：8%<br />第四年：4%<br />购买超过4年免征</td>
+            </tr>
+            
+        </table>
+        <div class="s_2R22">备注</div>
+        <p><a href="#">点击查看 新加坡印花税征收标准</a></p>
+        
+      </div>
+      <div class="s_2R3">
+        <div class="s_2R31">新加坡购房相关费用</div>
+        <div class="s_2R32">
+          <div class="s_2R321">
+            <div class="s_2R321L"><a href="#"><img src="images/lpdp/4.jpg" /></a></div>
+            <div class="s_2R321R">
+              <div class="s_2R321R1 fz18 cColor-313131">翠城新景</div>
+              <div class="s_2R321R2 fz14 cColor-626262">新加坡</div>
+              <div class="s_2R321R3 fz16 cColor-626262"><span class="fz24 cRed-d30f1b">6.4</span>万元/㎡</div>
+            </div>
+          </div>
+          <div class="s_2R321">
+            <div class="s_2R321L"><a href="#"><img src="images/lpdp/4.jpg" /></a></div>
+            <div class="s_2R321R">
+              <div class="s_2R321R1 fz18 cColor-313131">翠城新景</div>
+              <div class="s_2R321R2 fz14 cColor-626262">新加坡</div>
+              <div class="s_2R321R3 fz16 cColor-626262"><span class="fz24 cRed-d30f1b">6.4</span>万元/㎡</div>
+            </div>
+          </div>
+          <div class="s_2R321">
+            <div class="s_2R321L"><a href="#"><img src="images/lpdp/4.jpg" /></a></div>
+            <div class="s_2R321R">
+              <div class="s_2R321R1 fz18 cColor-313131">翠城新景</div>
+              <div class="s_2R321R2 fz14 cColor-626262">新加坡</div>
+              <div class="s_2R321R3 fz16 cColor-626262"><span class="fz24 cRed-d30f1b">6.4</span>万元/㎡</div>
+            </div>
+          </div>
+          <div class="s_2R321">
+            <div class="s_2R321L"><a href="#"><img src="images/lpdp/4.jpg" /></a></div>
+            <div class="s_2R321R">
+              <div class="s_2R321R1 fz18 cColor-313131">翠城新景</div>
+              <div class="s_2R321R2 fz14 cColor-626262">新加坡</div>
+              <div class="s_2R321R3 fz16 cColor-626262"><span class="fz24 cRed-d30f1b">6.4</span>万元/㎡</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_3">猜您喜欢</div>
+    <div class="s_4">
+      <div class="s_4con">
+        <div class="s_41">
+          <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+          <div class="s_412">
+            <div class="s_4121"><a href="#">Habitat公寓</a></div>
+            <div class="s_4122"><span>8</span>万元/㎡</div>
+          </div>
+        </div>
+        <div class="s_41">
+          <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+          <div class="s_412">
+            <div class="s_4121"><a href="#">Habitat公寓</a></div>
+            <div class="s_4122"><span>8</span>万元/㎡</div>
+          </div>
+        </div>
+        <div class="s_41">
+          <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+          <div class="s_412">
+            <div class="s_4121"><a href="#">Habitat公寓</a></div>
+            <div class="s_4122"><span>8</span>万元/㎡</div>
+          </div>
+        </div>
+        <div class="s_41">
+          <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+          <div class="s_412">
+            <div class="s_4121"><a href="#">Habitat公寓</a></div>
+            <div class="s_4122"><span>8</span>万元/㎡</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!---------------------------------------------------------------------------->
+
+<div class="s_footer">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_friendLink">
+        <p class="s_footTitle">免责声明</p>
+        <p class="s_footTitle1">本页面旨在为广大用户提供更多信息的无偿服务，所有信息均由开发商或代理机构提供，并由第三方评估机构进行安全评估，本站内所有内容并不表明网站之观点或意见，仅供参考和借鉴，投资者在购房时仍需慎重
+          考虑。投资者在购房交易时所造成的任何后果与本网站无关，当政府司法机关依照法定程序要求本网站披露个人资料时，我们将根据执法单位之要求或为公共安全之目的提供个人资料。在此情况下之任何免责。本页面多
+          提到项目面积如无特别表示，均指建筑面积。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="s_footer2">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="row height30"></div>
+      <div class="row">
+        <div class="s_footer2a"> <a href="#">关于我们</a> <a href="#">联系我们</a> <a href="#">媒体报道</a> <a href="#">海外动态</a><a href="#">友情链接</a><a href="#">帮助中心</a> <a href="#">意见反馈</a> <a href="#">法律申明</a><a href="#">加入我们</a><a href="#">网站地图</a> </div>
+      </div>
+      <div class="s_footer2b"> ©2013 - 2014 <span>深圳华人天下国际传媒有限公司</span> 版权所有<br />
+        海外投资第一平台  华人天下网 <span>粤ICP备14001988号-1</span> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

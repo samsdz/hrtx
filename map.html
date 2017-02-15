@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地图找房</title>
+<link rel="stylesheet" href="css/reset.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/Validform_v5.3.2_min.js"></script>
+<script src="js/map.js"></script>
+<link rel="stylesheet" href="css/map.css">
+
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+.Validform_checktip { margin-left: 8px; line-height: 20px; height: 20px; overflow: hidden; color: #999; font-size: 12px; }
+.Validform_right { color: #71b83d; padding-left: 20px; background: url(images/formImg/right.png) no-repeat left center; }
+.Validform_wrong { color: red; padding-left: 20px; white-space: nowrap; background: url(images/formImg/error.png) no-repeat left center; }
+.Validform_loading { padding-left: 20px; background: url(images/formImg/onLoad.gif) no-repeat left center; }
+.Validform_error { }
+#Validform_msg { color: #7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width: 280px; -webkit-box-shadow: 2px 2px 3px #aaa; -moz-box-shadow: 2px 2px 3px #aaa; background: #fff; position: absolute; top: 0px; right: 50px; z- index:99999;
+display: none; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe { position: absolute; left: 0px; top: -1px; z-index: -1; }
+#Validform_msg .Validform_title { line-height: 25px; height: 25px; text-align: left; font-weight: bold; padding: 0 8px; color: #fff; position: relative; background-color: #000; }
+#Validform_msg a.Validform_close:link, #Validform_msg a.Validform_close:visited { line-height: 22px; position: absolute; right: 8px; top: 0px; color: #fff; text-decoration: none; }
+#Validform_msg a.Validform_close:hover { color: #cc0; }
+#Validform_msg .Validform_info { padding: 8px; border: 1px solid #000; border-top: none; text-align: left; }
+</style>
+</head>
+<body>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="s_head">
+    <div class=" disIB taLeft s_headL floatLeft"> <a href="#"><img src="images/map/logo.jpg" /></a> <a href="#">首页</a> <a href="#">精选项目</a> <a href="#">评估方案</a> <a href="#">安全保障</a> <a href="#">找机构</a> <a href="#">活动沙龙</a> <a href="#">焦点话题</a> </div>
+    <div class=" disIB taRight s_headR floatRight"> <a href="#" style="padding-right:0;">登录</a> <span>︱</span> <a href="#" style="padding-left:0;">注册</a> <a href="#">企业合作</a> <span>咨询热线：400-9988-299</span> <a href="#">新闻中心</a> <a href="#">APP</a> </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="s_box">
+    <div class="s_leftBox">
+      <div class="s_leftBoxH">
+        <div class="s_left1">
+          <form class="s_fom1">
+            <select>
+              <option>国家</option>
+              <option>美国</option>
+              <option>加拿大</option>
+              <option>新加坡</option>
+              <option>日本</option>
+              <option>泰国</option>
+            </select>
+            <select>
+              <option>物业类型</option>
+              <option>公寓</option>
+              <option>联排别墅</option>
+              <option>海景房</option>
+            </select>
+            <select>
+              <option>户型</option>
+              <option>美国</option>
+              <option>加拿大</option>
+              <option>新加坡</option>
+              <option>日本</option>
+              <option>泰国</option>
+            </select>
+            <select>
+              <option>面积</option>
+              <option>美国</option>
+              <option>加拿大</option>
+              <option>新加坡</option>
+              <option>日本</option>
+              <option>泰国</option>
+            </select>
+            <select>
+              <option>总价/RMB</option>
+              <option>美国</option>
+              <option>加拿大</option>
+              <option>新加坡</option>
+              <option>日本</option>
+              <option>泰国</option>
+            </select>
+          </form>
+        </div>
+        <div class="s_left2">
+          <form  class="s_fom2">
+            <input type="text" placeholder="请输入楼盘名或国家/地区名">
+            <button type="submit">搜索</button>
+          </form>
+        </div>
+        <div class="s_left3">
+          <div class="s_left3Box"> <a href="#" class="s_On" hidefocus=”true” >精选推荐</a> <a href="#" hidefocus=”true” >按总价排序</a><a href="#" hidefocus=”true” >按面积排序</a> <span>为您找到180套相关房源</span> </div>
+        </div>
+        <div class="s_left4">
+          <div class="s_left4Box">
+            <div class="s_left4BoxList">
+              <div class="s_left4L"> <a href="#"><img src="images/map/71.jpg" /></a>
+                <div class="s_left4LHidden"></div>
+                <div class="s_left4LHidden2">物业编号X005</div>
+              </div>
+              <div class="s_left4R">
+                <div class="s_left4R1"> <a href="#">Verdana（维丹娜）</a> <span class="fz16 cColor-d30f1b fb">8.79万起/㎡</span><span class="fz14 cColor-626262"> ￥</span> </div>
+                <div class="s_left4R2"> <a href="#">新加坡</a><a href="#">第2邮区</a><a href="#">投资房</a> </div>
+                <div class="s_left4R3">
+                  <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，新加坡第一空中豪宅。</p>
+                </div>
+                <div class="s_left4R4">
+                  <div class="s_left4R41"> <a href="#"><img src="images/map/21.jpg" /></a> </div>
+                  <div class="s_left4R42">
+                    <div class="fz12 cColor-626262">开发商：</div>
+                    <div class="fz12 cColor-626262">国浩集团</div>
+                  </div>
+                  <div class="s_left4R43"> <span class="cColor-d30f1b fz14">98</span><span class="fz14">人已收藏</span> </div>
+                  <div class="s_left4R44"> <a href="#">加入对比</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_left4BoxList">
+              <div class="s_left4L"> <a href="#"><img src="images/map/72.jpg" /></a>
+                <div class="s_left4LHidden"></div>
+                <div class="s_left4LHidden2">物业编号X005</div>
+              </div>
+              <div class="s_left4R">
+                <div class="s_left4R1"> <a href="#">Kiara 9（满家乐9号）</a> <span class="fz16 cColor-d30f1b fb">8.79万起/㎡</span><span class="fz14 cColor-626262"> ￥</span> </div>
+                <div class="s_left4R2"> <a href="#">新加坡</a><a href="#">第2邮区</a><a href="#">投资房</a> </div>
+                <div class="s_left4R3">
+                  <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，新加坡第一空中豪宅。</p>
+                </div>
+                <div class="s_left4R4">
+                  <div class="s_left4R41"> <a href="#"><img src="images/map/21.jpg" /></a> </div>
+                  <div class="s_left4R42">
+                    <div class="fz12 cColor-626262">开发商：</div>
+                    <div class="fz12 cColor-626262">国浩集团</div>
+                  </div>
+                  <div class="s_left4R43"> <span class="cColor-d30f1b fz14">98</span><span class="fz14">人已收藏</span> </div>
+                  <div class="s_left4R44"> <a href="#">加入对比</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_left4BoxList">
+              <div class="s_left4L"> <a href="#"><img src="images/map/73.jpg" /></a>
+                <div class="s_left4LHidden"></div>
+                <div class="s_left4LHidden2">物业编号X005</div>
+              </div>
+              <div class="s_left4R">
+                <div class="s_left4R1"> <a href="#">D’Leedon（丽敦豪邸）</a> <span class="fz16 cColor-d30f1b fb">8.79万起/㎡</span><span class="fz14 cColor-626262"> ￥</span> </div>
+                <div class="s_left4R2"> <a href="#">新加坡</a><a href="#">第2邮区</a><a href="#">投资房</a> </div>
+                <div class="s_left4R3">
+                  <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，新加坡第一空中豪宅。</p>
+                </div>
+                <div class="s_left4R4">
+                  <div class="s_left4R41"> <a href="#"><img src="images/map/21.jpg" /></a> </div>
+                  <div class="s_left4R42">
+                    <div class="fz12 cColor-626262">开发商：</div>
+                    <div class="fz12 cColor-626262">国浩集团</div>
+                  </div>
+                  <div class="s_left4R43"> <span class="cColor-d30f1b fz14">98</span><span class="fz14">人已收藏</span> </div>
+                  <div class="s_left4R44"> <a href="#">加入对比</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_left4BoxList">
+              <div class="s_left4L"> <a href="#"><img src="images/map/74.jpg" /></a>
+                <div class="s_left4LHidden"></div>
+                <div class="s_left4LHidden2">物业编号X005</div>
+              </div>
+              <div class="s_left4R">
+                <div class="s_left4R1"> <a href="#">Senja(夕阳别墅)</a> <span class="fz16 cColor-d30f1b fb">8.79万起/㎡</span><span class="fz14 cColor-626262"> ￥</span> </div>
+                <div class="s_left4R2"> <a href="#">新加坡</a><a href="#">第2邮区</a><a href="#">投资房</a> </div>
+                <div class="s_left4R3">
+                  <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，新加坡第一空中豪宅。</p>
+                </div>
+                <div class="s_left4R4">
+                  <div class="s_left4R41"> <a href="#"><img src="images/map/21.jpg" /></a> </div>
+                  <div class="s_left4R42">
+                    <div class="fz12 cColor-626262">开发商：</div>
+                    <div class="fz12 cColor-626262">国浩集团</div>
+                  </div>
+                  <div class="s_left4R43"> <span class="cColor-d30f1b fz14">98</span><span class="fz14">人已收藏</span> </div>
+                  <div class="s_left4R44"> <a href="#">加入对比</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s_rightBox">
+      <div class="row">
+        <div class="s_map">
+          <div class="s_mapH">
+            <div class="s_mapH1"> <img src="images/map/1.jpg" /><a href="#" hidefocus=”true” >列表模式</a> </div>
+            <div class="s_mapH1"> <img src="images/map/2.jpg" /><a href="#" hidefocus=”true” >地图模式</a> </div>
+          </div>
+          <div class="s_mapF"> 
+          
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!---------------------------------------------------------------------------->
+
+</body>
+</html>

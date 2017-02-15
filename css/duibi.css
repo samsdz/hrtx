@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+html { overflow-x: hidden; }
+.row { width: 100%; clear: both; }
+.contaier1248 { width: 1248px; clear: both; margin: 0 auto; }
+.height30 { height: 30px; }
+.fz16 { font-size: 16px; }
+.fz18 { font-size: 18px; }
+.fz14 { font-size: 14px; }
+.fz22 { font-size: 22px; }
+.cRed-d30f1b { color: #d30f1b; }
+.cColor-313131 { color: #313131; }
+.cColor-626262 { color: #626262; }
+/*************************************************************************************/
+.top { height: 35px; border-bottom: 1px solid #e5e5e5; }
+.top a { font-size: 12px; color: #898989; }
+.s_topleft { height: 35px; line-height: 35px; float: left; width: 40%; text-align: left; }
+.s_topleft img { vertical-align:text-top; padding-top:2px;padding-top/*\**/:0px\9; }
+.s_topright { height: 35px; line-height: 35px; float: right; width: 40%; text-align: right; color: #898989; }
+.s_topleft span { padding-right: 25px; }
+.s_topright span { padding-left: 25px; }
+/*************************************************************************************/
+.head { height: 90px; z-index:1024; background:#fff; border-bottom:1px solid #dcdcdc; }
+.s_headl { width: 380px; float: left; }
+.s_headl a { display: block; height: 90px; line-height: 90px; }
+.s_headl a img { vertical-align: middle; }
+.s_headr { width: 200px; float: right; text-align: right; }
+.s_headr a { display: block; height: 90px; line-height: 90px; }
+.s_headr a img { vertical-align: middle; }
+.s_headc { width: 50%; float: left; margin-top: 29px; }
+/*************************************************************************************/
+.s_search { border: 1px solid #e5e5e5; width: 480px; height: 35px; }
+.s_searchl { float: left; width: 20%; line-height: 35px; height: 35px; background: #fcfbfb; border-right: 1px solid #e5e5e5; text-align: center; font-size: 14px; position: relative; }
+.s_searchl ul { position: absolute; z-index: 99; background: #FFF; top: 35px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+.s_searchl ul li { width: 94px; height: 32px; line-height: 32px; list-style: none; }
+.s_searchl ul li a { display: block; width: 94px; height: 32px; line-height: 32px; text-align: center; }
+.s_searchl ul li a:hover { background: #fcfbfb; text-decoration: none; }
+.s_searchc { float: left; width: 55%; line-height: 34px; height: 34px; }
+.s_searchc input { border: 0; width: 100%; padding: 0 10px; font-size: 14px; height: 34px; line-height: 34px; }
+.s_searchr { float: right; width: 20%; }
+.s_searchr input { background-color: #d30f1b; color: #FFF; font-size: 16px; height: 36px; width: 100%; line-height: 36px; text-align: center; border: 0; border: none; cursor: pointer; }
+/*************************************************************************************/
+.nav { height: 45px; line-height: 45px; background-color: #333; color: #FFF; position: relative; }
+.nav li { display: inline-block; }
+.nav li a { display: block; padding: 0 40px; float: left; color: #fff; font-size: 16px;  }
+.nav li a:hover { text-decoration: none; background: #fff; color: #333; height: 40px; line-height: 35px; }
+.nav li .s_on { text-decoration: none; background: #fff; color: #333; height: 40px; line-height: 35px; }
+/*************************************************************************************/
+.s_subnav { width: 1248px; height: 430px; overflow: hidden;  position: absolute; top: 44px; background: #FFF; z-index:1000;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc; }
+.s_subnavhead { overflow: hidden; clear: both; height: 140px; position: relative; }
+.s_subnavtitle1 { width: 220px; height: 130px; text-align: center; cursor: pointer; position: absolute; top: 11px; left: 10px; }
+.s_subnavtitle1 img { margin-top: 10px; }
+.s_subnavtitle1 p { font-size: 14px; color: #313131; line-height: 25px; text-align: center; }
+.s_subnavtitle2 { width: 220px; height: 130px; text-align: center; cursor: pointer; position: absolute; top: 11px; left: 240px; }
+.s_subnavtitle2 img { margin-top: 10px; }
+.s_subnavtitle2 p { font-size: 14px; color: #313131; line-height: 25px; text-align: center; }
+.s_subnavtitle3 { width: 220px; height: 130px; text-align: center; cursor: pointer; position: absolute; top: 11px; left: 470px; }
+.s_subnavtitle3 img { margin-top: 10px; }
+.s_subnavtitle3 p { font-size: 14px; color: #313131; line-height: 25px; text-align: center; }
+.s_bottomOn { height: 130px; background: #fafafa; border: 1px solid #dcdcdc; border-bottom: none; top: 10px; margin-left: -1px; }
+.s_subnavfoot { overflow: hidden; background: #fafafa; border-top: 1px solid #dedede; margin-top: -1px; font-size: 14px; line-height: 24px; }
+.s_subnavfoot1 { background: #fafafa; overflow: hidden; height: 314px; color: #626262; }
+.s_subnavfoot2 { background: #fafafa; overflow: hidden; height: 314px; color: #626262; }
+.s_subnavfoot3 { background: #fafafa; overflow: hidden; height: 314px; color: #626262; }
+.s_navfootl { width: 510px; float: left; height: 100%; margin-left: 78px; }
+.s_navfootlp1 { color: #313131; font-size: 28px; margin-top: 45px; }
+.s_navfootlp2 { color: #626262; font-size: 14px; line-height: 24px; margin-top: 10px; }
+.s_navfootlbtn { display: block; clear: both; background: #d30f1b; color: #FFF; font-size: 14px; text-align: center; width: 120px; height: 30px; line-height: 30px; margin-top: 30px; }
+.s_navfootlbtn:hover { text-decoration: none; color: #FFF; }
+.s_navfootr { width: 50%; float: right; text-align: center; height: 100%; }
+.s_navfootr img { margin-top: 35px; }
+/*************************************************************************************/
+
+.s_table{ width:100%; height:auto; margin:25px auto 75px auto;}
+.s_table td{ border:1px solid #dcdcdc; text-align:center; color:#989898; font-size:14px; padding:12px 5px;}
+.s_table .table_head{ text-align:left; font-size:20px; color:#313131; text-indent:17px;}
+.s_table img{ margin:23px auto; width:213px; height:159px;}
+.s_table .s_red{ color:#d30f1b;}
+
+.table_btn{ width:120px; height:27px; border:1px solid #eee; display:inline-block; line-height:27px; text-align:center; font-size:14px; color:#626262;}
+.table_btn:hover{ text-decoration:none; color:#626262;}
+
+.table_btn1{ width:120px; height:27px; background:#d30f1b; display:inline-block; line-height:27px; text-align:center; font-size:14px; color:#FFF;}
+.table_btn1:hover{ text-decoration:none;color:#FFF;}
+/*************************************************************************************/
+.s_footer { border-top: 1px solid #ebebeb; height: 235px; width: 100%; background: #fafafa; }
+.s_footLeft { width: 545px; float: left; margin-right: 45px; margin-top: 22px; }
+.s_footer p.s_footTitle {  color: #313131; font-size: 20px; height: 40px; line-height: 40px; border-bottom: 1px solid #ebebeb; }
+.s_footer p.s_footContent { font-size: 14px; color: #626262; line-height: 24px; margin-top: 15px; text-align: justify; text-justify: inter-ideograph; }
+.s_footCenter { width: 280px; float: left; margin-top: 22px; }
+.s_footRight { width: 335px; float: right; margin-top: 22px; }
+.s_footRight img { margin-right: 5px; border: none; border: 0; }
+.s_footRight .s_footWX { display: inline-block; width: 142px; vertical-align: bottom; }
+.s_footHead { overflow: hidden; }
+.s_friendLink { width: 100%; clear: both; margin-top: 22px; overflow: hidden; }
+.s_friendLink a { width: 126px; height: 33px; display: inline-block; border: 1px solid #dcdcdc; text-align: center; background: #FFF; line-height: 33px; font-size: 14px; color: #626262; margin-right: 10px; margin-top: 10px; }
+.s_friendLink a:hover { text-decoration: none; }
+.s_footer2 { height: 100px; background: #111; text-align: center; overflow: hidden; }
+.s_footer2a a { color: #cfcfcf; font-size: 14px; margin: 0 10px; height: 24px; line-height: 24px; margin-top: 30px; }
+.s_footer2b { font-size: 12px; color: #7f7f7f; margin-top: 10px; }
+.s_footer2b span { color: #e23c41; }
+/*************************************************************************************/
+
+/***********************************THE LAST************************************************/
+.clearRight { margin-right: 0; }
+.s_bottomLine{ border-bottom:1px solid #999;}
+.s_fb{ font-weight:bold;}

@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/flexslider.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+<script src="js/jquery.pin.js"></script>
+<script src="js/Validform_v5.3.2_min.js"></script>
+<script src="js/jquery.dotdotdot.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+<style>
+.Validform_checktip { margin-left: 8px; line-height: 20px; height: 20px; overflow: hidden; color: #999; font-size: 12px; }
+.Validform_right { color: #71b83d; padding-left: 20px; background: url(images/formImg/right.png) no-repeat left center; }
+.Validform_wrong { color: red; padding-left: 20px; white-space: nowrap; background: url(images/formImg/error.png) no-repeat left center; }
+.Validform_loading { padding-left: 20px; background: url(images/formImg/onLoad.gif) no-repeat left center; }
+.Validform_error {}
+#Validform_msg { color: #7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width: 280px; -webkit-box-shadow: 2px 2px 3px #aaa; -moz-box-shadow: 2px 2px 3px #aaa; background: #fff; position: absolute; top: 0px; right: 50px; z- index:99999;
+display: none; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe { position: absolute; left: 0px; top: -1px; z-index: -1; }
+#Validform_msg .Validform_title { line-height: 25px; height: 25px; text-align: left; font-weight: bold; padding: 0 8px; color: #fff; position: relative; background-color: #000; }
+#Validform_msg a.Validform_close:link, #Validform_msg a.Validform_close:visited { line-height: 22px; position: absolute; right: 8px; top: 0px; color: #fff; text-decoration: none; }
+#Validform_msg a.Validform_close:hover { color: #cc0; }
+#Validform_msg .Validform_info { padding: 8px; border: 1px solid #000; border-top: none; text-align: left; }
+</style>
+</head>
+<body>
+<!---------------------------------------------------------------------------->
+<div class="top">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_topleft"> <img src="images/a (2).jpg" /> <span>400-9988-299</span> <img src="images/1_05.jpg" /> <span>400-9911-699</span> </div>
+      <div class="s_topright"> <span style="padding:0;"><a href="#">登录</a></span> <span style="padding:0; font-size:12px;">︱</span> <span style="padding:0;"><a href="#">注册</a></span> <span><a href="#">企业合作</a></span> <span><a href="#">新闻中心</a></span> <span><a href="#">APP</a></span> </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="head">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_headl"> <a href="/"><img src="images/1_12.jpg" /></a> </div>
+      <div class="s_headc">
+        <form class="demoform">
+          <div class="s_search">
+            <div class="s_searchl"> <a href="javascript:void(0)" class=""> <span> <em>全部</em> <i class="fa fa-caret-down"></i></span> </a>
+              <ul style="display:none;">
+                <li><a href="javascript:void(0)">房产</a></li>
+                <li><a href="javascript:void(0)">留学</a></li>
+                <li><a href="javascript:void(0)">移民</a></li>
+                <li><a href="javascript:void(0)">资讯</a></li>
+                <li><a href="javascript:void(0)">问答</a></li>
+                <li><a href="javascript:void(0)">方案</a></li>
+              </ul>
+              <select style="display:none;">
+                <option>全部</option>
+                <option>房产</option>
+                <option>留学</option>
+                <option>移民</option>
+                <option>资讯</option>
+                <option>问答</option>
+                <option>方案</option>
+              </select>
+            </div>
+            <div class="s_searchc">
+              <input type="text" placeholder="搜索关键词..." datatype="*1-15">
+            </div>
+            <div class="s_searchr">
+              <input type="submit" value="搜索" >
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="s_headr"> <a href="#"><img src="images/1_10.jpg" /></a> </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="nav">
+  <div class="row">
+    <div class="contaier1248">
+      <ul>
+        <li><a href="http://192.168.1.21:8001/2.0/" class="s_subs s_on">首页</a></li>
+        <li><a href="#" class="s_sub">精选项目 <i class="fa fa-caret-down"></i></a></li>
+        <li><a href="http://192.168.1.21:8001/2.0/yimin.html" class="s_subs">评估方案</a></li>
+        <li><a href="#" class="s_subs">安全保障</a></li>
+        <li><a href="#" class="s_subs">找机构</a></li>
+        <li><a href="#" class="s_subs">活动沙龙</a></li>
+        <li><a href="#" class="s_subs">焦点话题</a></li>
+      </ul>
+      <div class="s_subnav" style="display:none;">
+        <div class="s_subnavcon">
+          <div class="s_subnavhead">
+            <div class="s_subnavtitle1 s_bottomOn"> <img src="images/f22.jpg" />
+              <p>海外房产</p>
+            </div>
+            <div class="s_subnavtitle2"> <img src="images/f33.jpg" />
+              <p>投资移民</p>
+            </div>
+            <div class="s_subnavtitle3"> <img src="images/f11.jpg" />
+              <p>海外留学</p>
+            </div>
+          </div>
+          <div class="s_subnavfoot">
+            <div class="s_subnavfoot1" style="display:;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外房产</p>
+                <p class="s_navfootlp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f2.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot2" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">投资移民</p>
+                <p class="s_navfootlp2">精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之路保驾护航。精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之精选全国40多家移民机构100余项目。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f3.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot3" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外留学</p>
+                <p class="s_navfootlp2">网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f1.jpg" /> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="banner">
+  <div class="row">
+    <div class="flexslider">
+      <ul class="slides">
+        <li> <img src="images/slide1.jpg" /> </li>
+        <li> <img src="images/slide2.jpg" /> </li>
+        <li> <img src="images/slide1.jpg" /> </li>
+        <li> <img src="images/slide2.jpg" /> </li>
+      </ul>
+    </div>
+    <div class="s_huoqufangan2"></div>
+    <div class="s_huoqufangan">
+      <div class="contaier1248">
+        <div class="s_hqfal">
+          <p class="s_hqfalp1">我要免费个性化方案</p>
+          <p class="s_hqfalp2">已有<span>786</span>人获得免费方案</p>
+        </div>
+        <div class="s_hqfar">
+          <form>
+            <div class="s_fangan1">
+              <p>意向投资领域</p>
+              <ul style="display:none;" class="s_an1">
+                <li class="ly1"><a href="javascript:void(0)">海外房产</a></li>
+                <li class="ly2"><a href="javascript:void(0)">投资移民</a></li>
+                <li class="ly3"><a href="javascript:void(0)">海外留学</a></li>
+              </ul>
+            </div>
+            <div class="s_fangan2">
+              <p>意向国家</p>
+              <ul style="display:none;" class="s_an2">
+                <li class="ly1gj1" style="display:none;"><a href="javascript:void(0)">美国</a></li>
+                <li class="ly1gj2" style="display:none;"><a href="javascript:void(0)">新加坡</a></li>
+                <li class="ly1gj3" style="display:none;"><a href="javascript:void(0)">马来西亚</a></li>
+                <li class="ly1gj4" style="display:none;"><a href="javascript:void(0)">澳洲</a></li>
+                <li class="ly1gj5" style="display:none;"><a href="javascript:void(0)">新西兰</a></li>
+                <li class="ly1gj6" style="display:none;"><a href="javascript:void(0)">英国</a></li>
+                <li class="ly2gj1" style="display:none;"><a href="javascript:void(0)">美国</a></li>
+                <li class="ly2gj2" style="display:none;"><a href="javascript:void(0)">中国香港</a></li>
+                <li class="ly2gj3" style="display:none;"><a href="javascript:void(0)">新加坡</a></li>
+                <li class="ly2gj4" style="display:none;"><a href="javascript:void(0)">加拿大</a></li>
+                <li class="ly2gj5" style="display:none;"><a href="javascript:void(0)">澳洲</a></li>
+                <li class="ly2gj6" style="display:none;"><a href="javascript:void(0)">新西兰</a></li>
+                <li class="ly2gj7" style="display:none;"><a href="javascript:void(0)">欧洲</a></li>
+                <li class="ly2gj8" style="display:none;"><a href="javascript:void(0)">英国</a></li>
+                <li class="ly3gj1" style="display:none;"><a href="javascript:void(0)">美国</a></li>
+                <li class="ly3gj2" style="display:none;"><a href="javascript:void(0)">英国</a></li>
+                <li class="ly3gj3" style="display:none;"><a href="javascript:void(0)">新加坡</a></li>
+                <li class="ly3gj4" style="display:none;"><a href="javascript:void(0)">中国香港</a></li>
+                <li class="ly3gj5" style="display:none;"><a href="javascript:void(0)">澳大利亚</a></li>
+                <li class="ly3gj6" style="display:none;"><a href="javascript:void(0)">新西兰</a></li>
+                <li class="ly3gj7" style="display:none;"><a href="javascript:void(0)">加拿大</a></li>
+                <li class="ly3gj8" style="display:none;"><a href="javascript:void(0)">日本</a></li>
+                <li class="ly3gj9" style="display:none;"><a href="javascript:void(0)">马来西亚</a></li>
+                <li class="ly3gj10" style="display:none;"><a href="javascript:void(0)">韩国</a></li>
+              </ul>
+            </div>
+            <div class="s_fangan3">
+              <p>预期投资金额</p>
+              <ul style="display:none;" class="s_an3">
+                <li class="ly1je1" style="display:none;"><a href="javascript:void(0)">200万以下</a></li>
+                <li class="ly1je2" style="display:none;"><a href="javascript:void(0)">200-300万</a></li>
+                <li class="ly1je3" style="display:none;"><a href="javascript:void(0)">300-400万</a></li>
+                <li class="ly1je4" style="display:none;"><a href="javascript:void(0)">400-500万</a></li>
+                <li class="ly1je5" style="display:none;"><a href="javascript:void(0)">500-1000万</a></li>
+                <li class="ly1je6" style="display:none;"><a href="javascript:void(0)">1000万以上</a></li>
+                <li class="ly2je1" style="display:none;"><a href="javascript:void(0)">400万以下</a></li>
+                <li class="ly2je2" style="display:none;"><a href="javascript:void(0)">400-500万</a></li>
+                <li class="ly2je3" style="display:none;"><a href="javascript:void(0)">500-600万</a></li>
+                <li class="ly2je4" style="display:none;"><a href="javascript:void(0)">600-700万</a></li>
+                <li class="ly2je5" style="display:none;"><a href="javascript:void(0)">700-800万</a></li>
+                <li class="ly2je6" style="display:none;"><a href="javascript:void(0)">800万以上</a></li>
+                <li class="ly3je1" style="display:none;"><a href="javascript:void(0)">100-200万</a></li>
+                <li class="ly3je2" style="display:none;"><a href="javascript:void(0)">200-300万</a></li>
+                <li class="ly3je3" style="display:none;"><a href="javascript:void(0)">300-400万</a></li>
+                <li class="ly3je4" style="display:none;"><a href="javascript:void(0)">400万以上</a></li>
+              </ul>
+            </div>
+            <div class="s_fangan4">
+              <p>项目类型</p>
+              <ul style="display:none;" class="s_an4">
+                <li class="ly1lx1" style="display:none;"><a href="javascript:void(0)">公寓</a></li>
+                <li class="ly1lx2" style="display:none;"><a href="javascript:void(0)">双拼别墅</a></li>
+                <li class="ly1lx3" style="display:none;"><a href="javascript:void(0)">联排别墅</a></li>
+                <li class="ly1lx4" style="display:none;"><a href="javascript:void(0)">独栋别墅</a></li>
+                <li class="ly2lx1" style="display:none;"><a href="javascript:void(0)">房产类</a></li>
+                <li class="ly2lx2" style="display:none;"><a href="javascript:void(0)">金融/债券/基金</a></li>
+                <li class="ly2lx3" style="display:none;"><a href="javascript:void(0)">项目投资</a></li>
+                <li class="ly2lx4" style="display:none;"><a href="javascript:void(0)">创立生意</a></li>
+                <li class="ly2lx5" style="display:none;"><a href="javascript:void(0)">国债</a></li>
+                <li class="ly3lx1" style="display:none;"><a href="javascript:void(0)">大专</a></li>
+                <li class="ly3lx2" style="display:none;"><a href="javascript:void(0)">本科</a></li>
+                <li class="ly3lx3" style="display:none;"><a href="javascript:void(0)">研究生</a></li>
+                <li class="ly3lx4" style="display:none;"><a href="javascript:void(0)">博士</a></li>
+                <li class="ly3lx5" style="display:none;"><a href="javascript:void(0)">高中</a></li>
+                <li class="ly3lx6" style="display:none;"><a href="javascript:void(0)">MBA</a></li>
+              </ul>
+            </div>
+            <input type="submit" value="获取免费方案">
+            <select style="display:none;" class="s_se1">
+              <option>意向投资领域</option>
+              <option>投资领域1</option>
+              <option>投资领域2</option>
+              <option>投资领域3</option>
+              <option>投资领域4</option>
+            </select>
+            <select style="display:none;" class="s_se2">
+              <option>意向国家</option>
+              <option>意向国家1</option>
+              <option>意向国家2</option>
+              <option>意向国家3</option>
+              <option>意向国家4</option>
+            </select>
+            <select style="display:none;" class="s_se3">
+              <option>预期投资金额</option>
+              <option>投资金额1</option>
+              <option>投资金额2</option>
+              <option>投资金额3</option>
+              <option>投资金额4</option>
+            </select>
+            <select style="display:none;" class="s_se4">
+              <option>项目类型</option>
+              <option>项目类型1</option>
+              <option>项目类型2</option>
+              <option>项目类型3</option>
+              <option>项目类型4</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_jqbox">
+      <div class="jq1">
+        <div class="jq1s">
+          <p class="jqp1">项目评估报告</p>
+          <p class="jqp2">全方位了解您不曾考虑的因素</p>
+        </div>
+        <img class="noLazy" src="images/11.png" />
+        <p class="jqp3">华人天下联合权威评估机<br />
+          构，通过分项拆解，提供完善<br />
+          客观的评估报告，助您走出<br />
+          广告误区。</p>
+      </div>
+      <div class="jq2">
+        <div class="jq2s">
+          <p class="jqp1">免费条件评估</p>
+          <p class="jqp2">初步评估您的条件匹配度</p>
+        </div>
+        <img src="images/12.png" />
+        <p class="jqp3">海外投资申请条件名目<br />
+          繁多，您的条件是否匹配，<br />
+          投资可行性一目了然。<br />
+        </p>
+      </div>
+      <div class="jq3">
+        <div class="jq3s">
+          <p class="jqp1">个性方案定制</p>
+          <p class="jqp2">深剖需求定制您的特属方案</p>
+        </div>
+        <img src="images/13.png" />
+        <p class="jqp3">投资切忌盲目，需求与目的<br />
+          合二为一，免费为您定制<br />
+          独一无二的专属投资方案。<br />
+        </p>
+      </div>
+      <div class="jq4">
+        <div class="jq4s">
+          <p class="jqp1">投资安全保障</p>
+          <p class="jqp2">最大化提升您的投资安全值</p>
+        </div>
+        <img src="images/14.png" />
+        <p class="jqp3">业界首创第三方安全监管，投<br />
+          资服务全方位保障，安全<br />
+          赔付，防止上当受骗。<br />
+        </p>
+      </div>
+      <div class="jq5">
+        <div class="jq5s">
+          <p class="jqp1">投资金融联盟</p>
+          <p class="jqp2">最大化降低资产贬值风险</p>
+        </div>
+        <img src="images/15.png" />
+        <p class="jqp3">华人天下联合权威评估机<br />
+          专为移民打造的多机构金融<br />
+          联盟系统，当投资受挫，自由<br />
+          转移投资，避免资产贬值。</p>
+      </div>
+      <div class="jq6">
+        <div class="jq6s">
+          <p class="jqp1">360度看房系统</p>
+          <p class="jqp2">360度无死角看房解决地域障碍</p>
+        </div>
+        <img src="images/16.png" />
+        <p class="jqp3">专为房产投资者打造的跨地域<br />
+          实时看房系统，线上看房、<br />
+          预订，线下考察+优惠，<br />
+          先人一步。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_zfy">
+      <div class="s_zfyhead">
+        <p class="s_zfyp1"><span>找房源</span> | 实地考察，精品臻选</p>
+        <p class="s_zfyp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。</p>
+        <p class="s_zfyp3"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+      </div>
+      <div class="s_zfyimgbox">
+        <div class="s_zfyimgWrap">
+          <div class="s_zfyimg"> <a href="#"><img src="images/zfy1.jpg" /></a>
+            <div class="s_icon1"></div>
+            <div class="s_zfybgtxt2"></div>
+            <div class="s_zfybgtxt">
+              <p>投资建议：非投资类房产，宜自住养老</p>
+            </div>
+            <div class="s_zfytxtBox">
+              <div class="s_zfytxt">
+                <p class="s_zfytitle"><a href="#">Kinrara Residence</a></p>
+                <ul>
+                  <li>位处布城，拥数所国际学校资源</li>
+                  <li>依傍3000英亩国家保护性森林，</li>
+                  <li>小区外围每50米一监控的全监控网络</li>
+                </ul>
+                <p class="s_zfyjiage"><span>250万</span>马币/套</p>
+                <a href="#" class="s_zfybutton">完整评估报告</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="s_zfyimgWrap">
+          <div class="s_zfyimg"> <a href="#"><img src="images/zfy2.jpg" /></a>
+            <div class="s_icon2"></div>
+            <div class="s_zfybgtxt2"></div>
+            <div class="s_zfybgtxt">
+              <p>投资建议：宜投资+自住双需求投资者</p>
+            </div>
+            <div class="s_zfytxtBox">
+              <div class="s_zfytxt">
+                <p class="s_zfytitle"><a href="#">Kiara 9</a></p>
+                <ul>
+                  <li>位处吉隆坡使馆区，国际企业总部集中区</li>
+                  <li>户型设计符合西方人生活方式及习惯，</li>
+                  <li>精装修、永久产权，小户型，周边人口密度大</li>
+                </ul>
+                <p class="s_zfyjiage"><span>0.9万</span>马币/㎡</p>
+                <a href="#" class="s_zfybutton">完整评估报告</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="s_zfyimgWrap">
+          <div class="s_zfyimg"> <a href="#"><img src="images/zfy3.jpg" /></a>
+            <div class="s_icon3"></div>
+            <div class="s_zfybgtxt2"></div>
+            <div class="s_zfybgtxt">
+              <p>投资建议：马来西亚典型热门投资类房产</p>
+            </div>
+            <div class="s_zfytxtBox">
+              <div class="s_zfytxt">
+                <p class="s_zfytitle"><a href="#">M City</a></p>
+                <ul>
+                  <li>位处吉隆坡外围，最受外籍人士欢迎居住地之一</li>
+                  <li>生活气息浓厚，国际学校、医院、商场配套丰富</li>
+                  <li>简装修，永久产权、复式公寓</li>
+                </ul>
+                <p class="s_zfyjiage"><span>1.4万</span>马币/㎡</p>
+                <a href="#" class="s_zfybutton">完整评估报告</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_zxm">
+      <div class="s_zxmhead">
+        <p class="s_zxmp1"><span>找项目</span> | 投资移民，深度剖析</p>
+        <p class="s_zxmp2">精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之路保驾护航。</p>
+        <p class="s_zxmp3"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+      </div>
+      <div class="s_zxmimgbox">
+        <div class="s_zxmimg"> <a href="#"><img src="images/zxm1.jpg" /></a>
+          <div class="s_zxmbgtxt2"></div>
+          <div class="s_zxmbgtxt">
+            <p>项目跟踪：项目一期I-829绿卡条件即将解除</p>
+          </div>
+          <div class="s_zxmtxt">
+            <div class="s_zxmtitle">
+              <p class="s_zxmtitlel"><a href="#">大西洋广场二期项目</a></p>
+              <p class="s_zxmtitler"><!--<img src="images/2_03.png" />-->美国EB-5类</p>
+            </div>
+            <ul>
+              <li><i class="fa fa-pie-chart"></i> 资金构成：项目总投资12.35亿美元，EB-5占比20%</li>
+              <li><i class="fa fa-check-square-o"></i> 投资类型：政府与开发商合作项目</li>
+              <li><i class="fa fa-linkedin"></i> 就业机会：就业盈余95.6%</li>
+            </ul>
+            <p class="s_zxmjiage"><span>50万</span>美金</p>
+            <a href="#" class="s_zxmbutton">完整评估报告</a> </div>
+        </div>
+        <div class="s_zxmimg"> <a href="#"><img src="images/zxm2.jpg" /></a>
+          <div class="s_zxmbgtxt2"></div>
+          <div class="s_zxmbgtxt">
+            <p>项目跟踪：项目于2014年12月已开工</p>
+          </div>
+          <div class="s_zxmtxt">
+            <div class="s_zxmtitle">
+              <p class="s_zxmtitlel"><a href="#">大西洋广场项目三期</a></p>
+              <p class="s_zxmtitler"><!--<img src="images/2_05.png" />-->美国EB-5类</p>
+            </div>
+            <ul>
+              <li><i class="fa fa-pie-chart"></i> 资金构成： EB-5占比21.6%</li>
+              <li><i class="fa fa-check-square-o"></i> 投资类型：政府与开发商合作项目</li>
+              <li><i class="fa fa-linkedin"></i> 就业机会：就业盈余71.1%</li>
+            </ul>
+            <p class="s_zxmjiage"><span>50万</span>美金</p>
+            <a href="#" class="s_zxmbutton">完整评估报告</a> </div>
+        </div>
+        <div class="s_zxmimg clearRight"> <a href="#"><img src="images/zxm3.jpg" /></a>
+          <div class="s_zxmbgtxt2"></div>
+          <div class="s_zxmbgtxt">
+            <p>项目跟踪：2014年开工，预计2016年底完工</p>
+          </div>
+          <div class="s_zxmtxt">
+            <div class="s_zxmtitle">
+              <p class="s_zxmtitlel"><a href="#">时代广场701TSQ大厦项目</a></p>
+              <p class="s_zxmtitler">美国EB-5类</p>
+            </div>
+            <ul>
+              <li><i class="fa fa-pie-chart"></i> 资金构成：总投资9.84亿美元，EB-5占比20%</li>
+              <li><i class="fa fa-check-square-o"></i> 投资类型：酒店、娱乐、购物综合地标</li>
+              <li><i class="fa fa-linkedin"></i> 就业机会：5136个，就业盈余28.4%</li>
+            </ul>
+            <p class="s_zxmjiage"><span>50万</span>美金</p>
+            <a href="#" class="s_zxmbutton">完整评估报告</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_hdsl">
+      <div class="s_hdslhead">
+        <p class="s_zxxlp1"><span>找学校</span> | 院校全视角，权威分析</p>
+        <p class="s_zxxlp2">网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。</p>
+        <p class="s_zxxlp3"><a href="#"><i class="fa fa-graduation-cap"></i> 院校库</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_zxx">
+      <div class="s_zxxLeft">
+        <div class="s_zxxLeftDiv"> <img src="images/11.jpg" />
+          <p class="fz16 ">哈佛大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：2</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/22.jpg" />
+          <p class="fz16 ">芝加哥大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：9</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/33.jpg" />
+          <p class="fz16 ">哥伦比亚大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：14</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/44.jpg" />
+          <p class="fz16 ">斯坦福大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：7</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/55.jpg" />
+          <p class="fz16 ">卡内基梅隆大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：57</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/66.jpg" />
+          <p class="fz16 ">澳大利亚国立大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：27</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/77.jpg" />
+          <p class="fz16 ">昆士兰大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：43</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/88.jpg" />
+          <p class="fz16 ">爱丁堡大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：17</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/99.jpg" />
+          <p class="fz16 ">新加坡国立大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：24</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+        <div class="s_zxxLeftDiv"> <img src="images/1010.jpg" />
+          <p class="fz16 ">杜伦大学</p>
+          <p class="fz14 cColor-626262 s_sqtjPai">私立 | QS排名：90</p>
+          <p class="fz14 cColor-626262 s_sqtj"><a href="#">申请条件</a></p>
+        </div>
+      </div>
+      <div class="s_zxxRight">
+        <div class="s_zxxRightHead"> <i class="fa fa-search fa-2x"></i><span class="fz22 cColor-313131">快速查找</span> </div>
+        <div class="s_zxxRightFoot">
+          <form class="demoform">
+            <input class="s_zxxFind" type="text" placeholder="请输入学校名..." datatype="*1-15">
+            <input class="s_zxxSearch" type="submit" value="立即搜索">
+          </form>
+          <div class="s_zxxCbox">
+            <div class="s_zxxC"> <a href="#"><img src="images/b1.jpg" /></a> <span><a href="#">美国</a></span> </div>
+            <div class="s_zxxC"> <a href="#"><img src="images/a2.jpg" /></a> <span><a href="#">英国</a></span> </div>
+            <div class="s_zxxC"> <a href="#"><img src="images/a3.jpg" /></a> <span><a href="#">加拿大</a></span> </div>
+            <div class="s_zxxC"> <a href="#"><img src="images/a4.jpg" /></a> <span><a href="#">瑞典</a></span> </div>
+            <div class="s_zxxC clearRight"> <img src="images/a5.jpg" /> <span><a href="#">德国</a></span> </div>
+          </div>
+          <div class="s_zxxSchool"> <a href="#">公立学校</a> <a href="#">文理学院</a> <a href="#">社区大学</a><a href="#">澳洲学院</a><a href="#">综合类大学</a> <a href="#">理工类大学</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_hdsl">
+      <div class="s_hdslhead">
+        <p class="s_hdslp1"><span>找机构</span> | 汇聚全国50家知名机构</p>
+        <p class="s_hdslp2">实行资质、成功案例、投诉案例、服务等多项考察，严格把控入驻机构实力，只甄选本项目/领域最佳服务机构，一站式助您进行机构比对。</p>
+        <p class="s_zjgMore"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_zjg">
+      <div class="s_zjgLeft">
+        <div class="s_zjgLhead">
+          <div class="s_zjgLh1 s_zjgLh1On"> <span>房产开发商</span> </div>
+          <div class="s_zjgLh2 "> <span>移民机构</span> </div>
+          <div class="s_zjgLh3 "> <span>留学机构</span> </div>
+        </div>
+        <div class="s_zjgLfoot">
+          <div class="s_zjgLf1">
+            <div class="s_zjgLf1One"> <a href="#" class="s_zjgA1"><img src="images/fc/jt_07.jpg" /></a> <a href="#" class="s_zjgA2"><img src="images/fc/jt_09.jpg" /></a> <a href="#" class="s_zjgA3"><img src="images/fc/jt_17.jpg" /></a> <a href="#" class="s_zjgA4"><img src="images/fc/jt_03.jpg" /></a> <a href="#" class="s_zjgA5"><img src="images/fc/jt_05.jpg" /></a> <a href="#" class="s_zjgA6"><img src="images/fc/jt_15.jpg" /></a> <a href="#" class="s_zjgA7"><img src="images/fc/jt_16.jpg" /></a> <a href="#" class="s_zjgA8"><img src="images/fc/jt_18.jpg" /></a> </div>
+            <div class="s_zjgLf1Two s_zjgP1">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">永泰亚洲</a></p>
+                  <p class="s_p2"><span>总部：新加坡</span><span>在线项目：5个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">永泰亚洲，1989年在新加坡上市，以卓越的建筑设计和空间缔造品位引领高端住宅市场，在东南亚市场上创建了众多经典项目。永泰总资产额已超逾37亿新币，产业项目广布于各区域最上乘的黄金地段。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP2" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">国浩房地产</a></p>
+                  <p class="s_p2"><span>总部：新加坡</span><span>在线项目：7个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">国浩房地产集团隶属丰隆集团旗下，1987年于新加坡上市，业务遍及新加坡、中国、马来西亚，是亚洲多功能综合物业项目开发领导者，屡获殊荣。24年间在新加坡成功开发33个住宅项目，总计9000余住宅单位。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP3" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">马星集团</a></p>
+                  <p class="s_p2"><span>总部：马来西</span><span>在线项目：6个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">马来西亚最大的华人开发商马星集团是马来西亚首屈一指的地产开发商，马来西亚全方位产业发展的领跑者，1992年在吉隆坡上市，目前在吉隆坡、巴生谷、槟城和新山地区拥有37个发展项目。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP4" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">大城市发展公司（BRDB）</a></p>
+                  <p class="s_p2"><span>总部：马来西亚</span><span>在线项目：4个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">BRDB是马来西亚历史最悠久和最值得信赖的房地产开发公司之一，拥有超过四十年的业界经验。是第一批上市的马来西亚房地产公司，主要致力于开发和管理马来西亚的住宅和商业房地产项目。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP5" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">凯德集团</a></p>
+                  <p class="s_p2"><span>总部：新加坡</span><span>在线项目：8个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">凯德集团是东南亚最大的上市房地产企业，也是亚洲最大的跨国综合房地产集团之一，旗下拥有凯德新加坡、凯德中国、凯德商用和雅诗阁等四大业务单位，共有8大业务门类，拥有9家上市公司。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP6" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">远东机构</a></p>
+                  <p class="s_p2"><span>总部：新加坡</span><span>在线项目：3个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">远东机构是新加坡最大的房地产开发商之一，也新加坡本地最大的私人房地产发展公司，成立于1960年，迄今为止公开发逾730项房地产项目，其中包括44,000个私宅单位，约占新加坡私宅总数的六分之一。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP7" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">碧桂园</a></p>
+                  <p class="s_p2"><span>总部：中国</span><span>在线项目：6个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">碧桂园集团创建于1992年，2007年在香港联交所主板上市；同年9月，成为摩根士丹利资本国际环球标准指数成分股、恒生综合指数及恒生中国内地综合指数成分股。是国内著名综合性企业集团，中国房地产十强企业。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP8" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">中正房地产集团</a></p>
+                  <p class="s_p2"><span>总部：澳洲</span><span>在线项目：5个</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">澳洲中正房是澳洲本土资深房地产开发商，致力于为投资型客户和自住型客户提供全方位的售后服务，在过往的25年, 澳洲中正已成功开发并售出超过8500套公寓和2200块别墅土地，总价值超过40亿澳元，逾70个项目。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="s_zjgLf2" style="display:none;">
+            <div class="s_zjgLf1One"> <a href="#" class="s_zjgA5"><img src="images/ym/332.jpg" /></a> <a href="#" class="s_zjgA6"><img src="images/ym/335.jpg" /></a> <a href="#" class="s_zjgA7"><img src="images/ym/337.jpg" /></a> <a href="#" class="s_zjgA8"><img src="images/ym/331.jpg" /></a> <a href="#" class="s_zjgA1"><img src="images/ym/333.jpg" /></a> <a href="#" class="s_zjgA2"><img src="images/ym/338.jpg" /></a> <a href="#" class="s_zjgA3"><img src="images/ym/334.jpg" /></a> <a href="#" class="s_zjgA4"><img src="images/ym/336.jpg" /></a> </div>
+            <div class="s_zjgLf1Two s_zjgP1">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">亨瑞出国</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span>优势项目：美国、加拿大</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">亨瑞集团（Henry Group）成立于1992年，经过二十多年的深耕、探索和积累，目前在移民留学、北美地产开发、基金投资、北美置业等多个领域内发展成为具有丰富经验和竞争优势的多元化跨国集团。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP2" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">世贸通移民</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span>优势项目：欧洲、美国</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">世贸通集团是亚洲品牌500强移民机构，于2002年在香港注册，拥有内地、香港、澳门三地移民资质，在中国设立香港、澳门、北京、深圳、广州、上海、青岛7家全资子公司，在亚、美、欧多国设有客户服务中心。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP3" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">环球移民</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span>优势项目：欧洲、加拿大</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">环球移民专注移民服务20多年，是同行业内规模最大、业务范围最广的出入境服务机构之一。也是因私出入境中介机构协会理事单位，在欧洲、加拿大等领域拥有丰富的经验，和强大的顾问团队。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP4" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">加成移民</a></p>
+                  <p class="s_p2"><span>总部：深圳</span><span>优势项目：加拿大</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">加成顾问有限公司成立于 一九九四年，2000年进入内地，是中国大陆最早从事移民咨询服务的机构之一。拥有包括加拿大著名律师、前任联邦移民官、前移民部上诉官员、注册会计师和从业十年以上的资深专业顾问等。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP5" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">澳星移民</a></p>
+                  <p class="s_p2"><span>总部：上海</span><span>优势项目：澳洲、新西兰、加拿大</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">澳星移民成立于2001年，是一个老字号专业移民留学机构，澳星移民拥有6名澳洲注册移民代理、5名加拿大移民律师及前移民官、3名新西兰注册移民代理和400位专业的移民留学顾问，积累了十分丰富的经验。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP6" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">景鸿移民</a></p>
+                  <p class="s_p2"><span>总部：广州</span><span>优势项目：香港</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">景鸿移民顾问有限公司成立于1990年，总部位于加拿大温哥华，以创办人关景鸿先生（Mr. Eddie Kwan）名字命名成立，是信誉一流的顾问中介机构，也是国内优秀的从事移民留学等综合服务的专业化公司。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP7" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">侨外移民</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span>优势项目：美国</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">侨外集团成立于1999年，是经国家公安部、工商总局批准的具有《因私出入境中介机构许可证》资格的一家专事“出国移民定居”业务的机构。是中国大陆美国EB-5投资移民项目引入者，创造“3天”“9天”特快获批纪录。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP8" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">澳德华移民</a></p>
+                  <p class="s_p2"><span>总部：深圳</span><span>优势项目：香港、美国、欧洲</span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">澳德华成立于1993年，是国内最早获得公安部颁发“因私出入境中介机构经营许可证”的单位之一，也是业内屈指可数的老牌移民服务机构，先后获得人民日报社和社会各界授予的“中国市场诚信优秀示范单位”等诸多荣誉。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="s_zjgLf3" style="display:none;">
+            <div class="s_zjgLf1One"> <a href="#" class="s_zjgA1"><img src="images/lx/229.jpg" /></a> <a href="#" class="s_zjgA2"><img src="images/lx/227.jpg" /></a> <a href="#" class="s_zjgA3"><img src="images/lx/226.jpg" /></a> <a href="#" class="s_zjgA4"><img src="images/lx/225.jpg" /></a> <a href="#" class="s_zjgA5"><img src="images/lx/222.jpg" /></a> <a href="#" class="s_zjgA6"><img src="images/lx/223.jpg" /></a> <a href="#" class="s_zjgA7"><img src="images/lx/224.jpg" /></a> <a href="#" class="s_zjgA8"><img src="images/lx/jg.jpg" /></a> </div>
+            <div class="s_zjgLf1Two s_zjgP1">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">新通教育</a></p>
+                  <p class="s_p2"><span>总部：杭州</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">新通国际教育集团创办于1996年，在中国以及全球拥有30余家分支机构，新通教育首创“360°成长规划”，为中国学生独家构建从留学前语言培训，到留学后就业指导全程服务的一站式、系统化、全方位国际教育服务体系。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP2" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">启德教育</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">启德教育成立于2000年，国内教育领域知名品牌，超过20多个国家和地区上千所院校授权的官方招生代表；拥有全球鲜有的美国国际招生协会（AIRC）认证会员资格；是首批被澳大利亚移民局授权使用“电子签证”系统的机构。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP3" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">津桥留学</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">成立于1996年，公司目前拥有美国、加拿大、英国和澳大利亚4个海外分支机构和全国80多家分公司和办事处，初步形成了津桥教育服务品牌的网络化覆盖。业务涵盖了美国、英国、加拿大、澳大利亚等全球20多个国家。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP4" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">金吉列出国</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">金吉列出国成立于2000年，隶属于金吉列集团，是中国500家最大私营企业之一，率先实施现代管理模式，首家获得ISO9001国际质量管理体系认证，每年向数万个家庭提供数十个国家（数千所海外院校）的免费留学咨询。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP5" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/s.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">澳际教育</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">澳际教育成立于1990年，是国内集少儿英语培训、成人英语培训、国际游学、国际预科、出国留学、海外移民六大产品为一体的国际服务机构，拥有33家分公司、3家海外办事处、3所语言培训学校、1所独立国际预科学校。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP6" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">澳加教育</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">艾迪成立于2002年，国内知名出国留学机构之一，是全球最大上市教育机构Navitas教育集团的合作伙伴，与澳大利亚、新西兰、美国、加拿大、英国、爱尔兰等世界众多知名院校合作紧密，在全国拥有20余家直属分公司。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP7" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/sss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">常春藤教育</a></p>
+                  <p class="s_p2"><span>总部：南京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">常春藤教育成立于2009年，由澳籍华人尹珺先生创办的国际教育交流平台，主要专注美国、英国等世界级百强名校的留学申请服务，以帮助学生进入欧美顶尖大学而著称业内，已累计培养了2000名中学生就读于世界百强名校。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+            <div class="s_zjgLf1Two s_zjgP8" style="display:none;">
+              <div class="s_zjgLf1TwoL"> <a href="#"><img src="images/ssss.jpg" /></a> </div>
+              <div class="s_zjgLf1TwoR">
+                <div class="s_zjgLf1TwoRhead">
+                  <p class="s_p1"><a href="#">威久留学</a></p>
+                  <p class="s_p2"><span>总部：北京</span><span></span></p>
+                  <p class="s_p3">已有<span>88</span>人关注此机构</p>
+                </div>
+                <div class="s_zjgLf1TwoRfoot">
+                  <p class="s_p4">成立于1998年，国内知名教育品牌之一，专注于国际高等教育，与全球上千家院校结成战略合作伙伴关系，在旧金山、伦敦、多伦多、温哥华等地设立了多家境外办事机构。在全国范围内拥有15家分公司。</p>
+                  <p class="s_p5">400-9988-299</p>
+                  <a href="#" class="s_p6">免费预约机构</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s_zjgRight">
+        <div class="s_zjgRhead">
+          <div class="s_zjgRh1 s_zjgRh12On">活跃排名</div>
+          <div class="s_zjgRh2">关注排名</div>
+        </div>
+        <div class="s_zjgRfoot">
+          <div class="s_zjgRf1">
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">1</div>
+              <div class="s_zjgRfList2"><img src="images/a1.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">新通教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">128</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">2</div>
+              <div class="s_zjgRfList2"><img src="images/b2.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">金吉列留学</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">100</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">3</div>
+              <div class="s_zjgRfList2"><img src="images/c3.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">启德教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">109</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1">4</div>
+              <div class="s_zjgRfList2"><img src="images/d4.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">德邦教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">109</span>个问题</p>
+              </div>
+            </div>
+          </div>
+          <div class="s_zjgRf2" style="display:none;">
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">1</div>
+              <div class="s_zjgRfList2"><img src="images/b2.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">金吉列留学</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">100</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">2</div>
+              <div class="s_zjgRfList2"><img src="images/a1.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">新通教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">128</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1 cRed-d30f1b">3</div>
+              <div class="s_zjgRfList2"><img src="images/d4.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">启德教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">109</span>个问题</p>
+              </div>
+            </div>
+            <div class="s_zjgRfList">
+              <div class="s_zjgRfList1">4</div>
+              <div class="s_zjgRfList2"><img src="images/c3.jpg" /></div>
+              <div class="s_zjgRfList3">
+                <p class="fz16">德邦教育</p>
+                <p class="fz14">已解决<span class="cRed-d30f1b">109</span>个问题</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_hdsl">
+      <div class="s_hdslhead">
+        <p class="s_hdslp1"><span>话题</span> | 传递经验，收获建议</p>
+        <p class="s_hdslp2">这是一个投资的大时代，也是海外投资的小时代，在这里都将获得共鸣，传递经验，这里，期待有您的声音。</p>
+        <p class="s_huatiRMore"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_huati">
+      <div class="s_biaoqian">
+        <div class="s_biaoqianTitle">问题标签</div>
+        <div class="s_biaoqianContent"> <span>【<a href="#">房产</a>】</span><a href="#">房产税</a><a href="#">遗产税</a><a href="#">贷款</a><a href="#">利率</a><a href="#">购房步骤</a><a href="#">新加坡房产</a><a href="#">美国房产</a><a href="#">美国房价</a><a href="#">房产手续</a><a href="#">马来西亚房产</a> </div>
+        <div class="s_biaoqianContent"> <span>【<a href="#">移民留学</a>】</span><a href="#">申请条件</a><a href="#">学费</a><a href="#">研究生</a><a href="#">本科</a><a href="#">福利</a><a href="#">永久绿卡</a><a href="#">免签</a><a href="#">澳洲移民</a><a href="#">葡萄牙移民</a> <a href="#">美国移民</a> </div>
+        <div class="s_biaoqianContent"> <span>【<a href="#">生活</a>】</span><a href="#">福利</a><a href="#">医疗</a><a href="#">旅游</a><a href="#">教育</a><a href="#">房租</a><a href="#">购物</a><a href="#">语言</a><a href="#">华人社区</a><a href="#">签证</a><a href="#">美食</a><a href="#">时尚</a> </div>
+      </div>
+      <div class="s_hotHuati">
+        <div class="s_hotHuatiHead">
+        	<div class="s_ywbd s_rmhtOn">有问必答 </div>
+          <div class="s_rmht ">热门话题</div>
+          
+          <div class="s_HuatiMore" style="display:none;"><a href="#">更多</a></div>
+          <div class="s_WendaMore" ><a href="#">更多</a></div>
+        </div>
+        <div class="s_hotHuatiFoot" style="display:none;">
+          <div class="s_hotHuatiList"> 
+            <!--<div class="s_hotHuatiLeftImg"><a href="#"><img src="images/1.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【解惑】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">澳大利亚买房你要交什么税，要交多少税</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/2.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【签证】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">分析大马政府表示中国游客下月起免签证</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">由于旷日持久的欧债危机迫使欧洲经济不景气，欧元兑人民币汇率围绕“8”元大关起...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/3.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【财经】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">中国银行获授权担任吉隆坡人民币业务清算行</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/4.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【房产】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">澳大利亚各州首次置业补贴对比</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!-- <p class="s_hotHuatiRightTxt">欧洲一些移民国以通过购买居住性房产这一为中国投资者所熟悉的投资方式，针对中国买家，即刻自动获得临时或永居身份...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!--<div class="s_hotHuatiLeftImg"><a href="#"><img src="images/1.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【房产】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">欧洲购房移民火热 葡萄牙最受高端人士欢迎</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/2.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【热点】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">业内人称明年大马建筑业将继续保持吸引力</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">由于旷日持久的欧债危机迫使欧洲经济不景气，欧元兑人民币汇率围绕“8”元大关起...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/3.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【汇率】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">外国银行预测2015年人民币和马币将成唯一升值的亚洲货币</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/4.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【房产】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">澳洲房产投资分析报告</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!-- <p class="s_hotHuatiRightTxt">欧洲一些移民国以通过购买居住性房产这一为中国投资者所熟悉的投资方式，针对中国买家，即刻自动获得临时或永居身份...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!--<div class="s_hotHuatiLeftImg"><a href="#"><img src="images/1.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【税收】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">马来西亚消费税即将实施</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/2.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【移民】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">葡萄牙移民项目适合哪几类人群</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">由于旷日持久的欧债危机迫使欧洲经济不景气，欧元兑人民币汇率围绕“8”元大关起...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/3.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【调查】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">马来西亚亿万富翁人数2018年可超阿联酋</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!--<p class="s_hotHuatiRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+          <div class="s_hotHuatiList"> 
+            <!-- <div class="s_hotHuatiLeftImg"><a href="#"><img src="images/4.jpg" /></a></div>-->
+            <div class="s_hotHuatiListHead"><a href="#">【房产】</a></div>
+            <p class="s_hotHuatiRightTitle"><a href="#">你知道吗？购买澳洲房产的N多好处</a></p>
+            <div class="s_hotHuatiListTime">2015-1-21</div>
+            <!-- <p class="s_hotHuatiRightTxt">欧洲一些移民国以通过购买居住性房产这一为中国投资者所熟悉的投资方式，针对中国买家，即刻自动获得临时或永居身份...<a href="#" class="s_xx">详细</a></p>--> 
+          </div>
+        </div>
+        <div class="s_hotWendaFoot" >
+          <div class="s_hotWendaList">
+            <div class="s_hotWendaLeftImg"><a href="#"><img src="images/2.jpg" /></a></div>
+            <p class="s_hotWendaRightTitle"><a href="#">美国投资移民申请的种类包括哪些？</a></p>
+            <p class="s_hotWendaRightTxt">由于旷日持久的欧债危机迫使欧洲经济不景气，欧元兑人民币汇率围绕“8”元大关起...<a href="#" class="s_xx">详细</a></p>
+          </div>
+          <div class="s_hotWendaList">
+            <div class="s_hotWendaLeftImg"><a href="#"><img src="images/1.jpg" /></a></div>
+            <p class="s_hotWendaRightTitle"><a href="#">留学瑞士须要注意什么？</a></p>
+            <p class="s_hotWendaRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>
+          </div>
+          <div class="s_hotWendaList">
+            <div class="s_hotWendaLeftImg"><a href="#"><img src="images/4.jpg" /></a></div>
+            <p class="s_hotWendaRightTitle"><a href="#">移民欧洲有什么好处？</a></p>
+            <p class="s_hotWendaRightTxt">欧洲一些移民国以通过购买居住性房产这一为中国投资者所熟悉的投资方式，针对中国买家，即刻自动获得临时或永居身份...<a href="#" class="s_xx">详细</a></p>
+          </div>
+          <div class="s_hotWendaList">
+            <div class="s_hotWendaLeftImg"><a href="#"><img src="images/3.jpg" /></a></div>
+            <p class="s_hotWendaRightTitle"><a href="#">留学瑞士须要注意什么？</a></p>
+            <p class="s_hotWendaRightTxt">需要注意三点：1、打工无法完全解决学费问题；2，不要弄虚作假；3、不要为了移民而留学...<a href="#" class="s_xx">详细</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="s_tiwen">
+        <div class="s_tiwenNum">
+          <div class="s_tiwenNumber">15236</div>
+        </div>
+        <div class="s_tiwenForm">
+          <form class="demoform">
+            <textarea placeholder="请在这里输入您的问题..." rows="5" datatype="*1-15"></textarea>
+            <p>您还可以输入<span>30</span>个字</p>
+            <input type="submit" value="我要提问" >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_hdsl">
+      <div class="s_hdslhead">
+        <p class="s_hdslp1"><span>声音</span> | 在这里，诠释您的绝对话语权</p>
+        <p class="s_hdslp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。 </p>
+        <p class="s_soundRMore"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_soundbox">
+      <div class="s_sound">
+        <div class="s_head">
+          <p><a href="#">很多网友看到“亿万富翁”、“投资移民”这样的字眼，顿时血压升高，情绪激动，口诛笔伐，上纲上线，认为富豪移民源于财富不阳光者有之，认为富豪不爱国者有之。</a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head1.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+        <div class="s_head">
+          <p><a href="#">少数富豪移民可能确实因为财富来得不干净，害怕东窗事发，以移民为退路。而且，有一些国家，例如新加坡，而对要证明其资产合法性十分困难的人来说，简直是天赐良机。</a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head2.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+        <div class="s_head">
+          <p><a href="#">很从这个定义可以看出，投资移民说到底还是投资，投进去资金，有的是为了赚取利润上的回报，有的是为了获得居留权以后的一系列好处。</a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+        <div class="s_head">
+          <p><a href="#">资本的本性是逐利的，哪里能赚钱，就会往哪里去，现在是经济全球化的时代，全球就是一个大市场，资本在全球市场中流动配置，国内富人将生意做到国外去，再正常不过。投资移民无疑是进行国外投资的很好手段，为“不差钱”的内地富豪们青睐，不足为奇。 </a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head1.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+        <div class="s_head">
+          <p><a href="#">不少投资者认为，作为海外投资，酒店式公寓最被看重的是不需要自己打理，且有固定收益。出于地域的因素，国内投资者对海外物业打理其实是存在一定不便因素的，因此这类包租酒店式公寓对纯投资型投资者来说，可以省去不少麻烦，以及来回奔波的时间成本。 </a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head2.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+        <div class="s_head">
+          <p><a href="#">在海外房产投资这一领域，投资者希望入主国外核心区域的同时，随着中国地产开发商的全球布局，相对海外本土开发商，投资者对来自中国的开发商更为信任与依赖。然这一背后，是很多投资者在全球资产配置的潮流中，对海外本土开发商的不甚了解。 </a></p>
+          <a href="#"><img class="s_soundHead noLazy" src="images/head.jpg" /></a> <span class="s_soundName">Rain.Liang</span> <span class="s_soundQQ">491252562@qq.com</span> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_hdsl">
+      <div class="s_hdslhead">
+        <p class="s_hdslp1"><span>活动沙龙</span> | 观大势，看专家如何解读</p>
+        <p class="s_hdslp2">焦点汇聚，话题解读，汇聚海外投资业内最具影响力展会、房产考察、游学等活动讯息，邀您现场探讨海外投资之大误区大机遇，与各路专家面对面，一探究竟。</p>
+        <p class="s_hdslp3"> <!--<a href="javascript:void(0);"><</a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> <a href="javascript:void(0);">></a>--> 
+          <a href="#"><i class="fa fa-hand-o-right"></i> 更多</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="s_hdslbox">
+    <div class="s_hdslimgbox1">
+      <div class="s_hdslimgboxCont"> <a href="#"><img class="noLazy" src="images/hdsl1.jpg" /></a> <span class="s_linka" style="display:none;"><img class="noLazy" src="images/a.png" /></span>
+        <div class="s_hdslcon1"><span>碧桂园金海湾看房团</span></div>
+        <div class="s_hdslcon2">
+          <div class="s_hdsltime"><i class="fa fa-clock-o"></i>11月13日—11月17日</div>
+          <div class="s_hdsladdr"><i class="fa fa-map-marker"></i>马来西亚吉隆坡-新山</div>
+        </div>
+      </div>
+    </div>
+    <div class="s_hdslimgbox2 s_hdslOn">
+      <div class="s_hdslimgboxCont"> <a href="#"><img class="noLazy" src="images/hdsl2.jpg" /></a> <span class="s_linka" class="s_linka"><img class="noLazy" src="images/a.png" /></span>
+        <div class="s_hdslcon1 s_hdslcon1On"><span>纽约大西洋广场三期项目首发会</span></div>
+        <div class="s_hdslcon2 s_hdslcon2On">
+          <div class="s_hdsltime"><i class="fa fa-clock-o"></i>11月13日—11月17日</div>
+          <div class="s_hdsladdr"><i class="fa fa-map-marker"></i>马来西亚吉隆坡-新山</div>
+        </div>
+      </div>
+    </div>
+    <div class="s_hdslimgbox3">
+      <div class="s_hdslimgboxCont"> <a href="#"><img class="noLazy" src="images/hdsl3.jpg" /></a> <span class="s_linka" class="s_linka" style="display:none;"><img class="noLazy" src="images/a.png" /></span>
+        <div class="s_hdslcon1"><span>宾州高速公路项目说明会</span></div>
+        <div class="s_hdslcon2">
+          <div class="s_hdsltime"><i class="fa fa-clock-o"></i>11月13日—11月17日</div>
+          <div class="s_hdsladdr"><i class="fa fa-map-marker"></i>马来西亚吉隆坡-新山</div>
+        </div>
+      </div>
+    </div>
+    <div class="s_hdslimgbox4">
+      <div class="s_hdslimgboxCont"> <a href="#"><img class="noLazy" src="images/hdsl4.jpg" /></a> <span class="s_linka" class="s_linka" style="display:none;"><img class="noLazy" src="images/a.png" /></span>
+        <div class="s_hdslcon1"><span>马来西亚游艇会考察</span></div>
+        <div class="s_hdslcon2">
+          <div class="s_hdsltime"><i class="fa fa-clock-o"></i>11月13日—11月17日</div>
+          <div class="s_hdsladdr"><i class="fa fa-map-marker"></i>马来西亚吉隆坡-新山</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+
+<div class="s_footer">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_footHead">
+        <div class="s_footLeft">
+          <p class="s_footTitle">关于华人天下</p>
+          <p class="s_footContent" style="text-indent:28px;"> 华人天下网是国内首家集海外房产、海外移民、海外留学的海外投资第三方客观服务平台，在这里，您将能就您感兴趣的任意项目，获得来自第三方权威评估机构的免费评估服务，及自身投资条件客观评估及免费方案制定服务，您还可通过本平台，实现海外投资安全监管服务，最大限度保障您的投资安全。</p>
+        </div>
+        <div class="s_footCenter">
+          <p class="s_footTitle">服务热线</p>
+          <p class="s_footContent"> <img src="images/ph.jpg" /> </p>
+        </div>
+        <div class="s_footRight">
+          <p class="s_footTitle">掌上投资联盟</p>
+          <p class="s_footContent"> <img src="images/wx.jpg" /> <img src="images/wx.jpg" /> <span class="s_footWX">实时服务，<br />
+            随时随地获取最新消息</span> </p>
+        </div>
+      </div>
+      <div class="s_friendLink">
+        <p class="s_footTitle">友情链接</p>
+        <a href="#">扬州365淘房网</a> <a href="#">福州二手房网</a> <a href="#">Tags资讯中心</a> <a href="#">北京二手房</a> <a href="#">扬州365淘房网</a><a href="#">扬州365淘房网</a><a href="#">扬州365淘房网</a><a href="#">扬州365淘房网</a><a href="#" style="margin-right:0;">扬州365淘房网</a> </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="s_footer2">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="row height30"></div>
+      <div class="row">
+        <div class="s_footer2a"> <a href="#">关于我们</a> <a href="#">联系我们</a> <a href="#">媒体报道</a> <a href="#">海外动态</a><a href="#">友情链接</a><a href="#">帮助中心</a> <a href="#">意见反馈</a> <a href="#">法律申明</a><a href="#">加入我们</a><a href="#">网站地图</a> </div>
+      </div>
+      <div class="s_footer2b"> ©2013 - 2014 <span>深圳华人天下国际传媒有限公司</span> 版权所有 </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

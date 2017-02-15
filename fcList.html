@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>房产列表页</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fcList.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/Validform_v5.3.2_min.js"></script>
+<script src="js/fcList.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+<script src="js/jquery.pin.js"></script>
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+<style>
+.Validform_checktip { margin-left: 8px; line-height: 20px; height: 20px; overflow: hidden; color: #999; font-size: 12px; }
+.Validform_right { color: #71b83d; padding-left: 20px; background: url(images/formImg/right.png) no-repeat left center; }
+.Validform_wrong { color: red; padding-left: 20px; white-space: nowrap; background: url(images/formImg/error.png) no-repeat left center; }
+.Validform_loading { padding-left: 20px; background: url(images/formImg/onLoad.gif) no-repeat left center; }
+.Validform_error { }
+#Validform_msg { color: #7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width: 280px; -webkit-box-shadow: 2px 2px 3px #aaa; -moz-box-shadow: 2px 2px 3px #aaa; background: #fff; position: absolute; top: 0px; right: 50px; z- index:99999;
+display: none; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe { position: absolute; left: 0px; top: -1px; z-index: -1; }
+#Validform_msg .Validform_title { line-height: 25px; height: 25px; text-align: left; font-weight: bold; padding: 0 8px; color: #fff; position: relative; background-color: #000; }
+#Validform_msg a.Validform_close:link, #Validform_msg a.Validform_close:visited { line-height: 22px; position: absolute; right: 8px; top: 0px; color: #fff; text-decoration: none; }
+#Validform_msg a.Validform_close:hover { color: #cc0; }
+#Validform_msg .Validform_info { padding: 8px; border: 1px solid #000; border-top: none; text-align: left; }
+</style>
+</head>
+<body>
+<!---------------------------------------------------------------------------->
+<div class="top">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_topleft"> <img src="images/a (2).jpg" /> <span>400-9988-299</span> <img src="images/1_05.jpg" /> <span>400-9911-699</span> </div>
+      <div class="s_topright"> <span style="padding:0;"><a href="#">登录</a></span> <span style="padding:0; font-size:12px;">︱</span> <span style="padding:0;"><a href="#">注册</a></span> <span><a href="#">企业合作</a></span> <span><a href="#">新闻中心</a></span> <span><a href="#">APP</a></span> </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="head">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_headl"> <a href="/"><img src="images/1_12.jpg" /></a> </div>
+      <div class="s_headc">
+        <form class="demoform">
+          <div class="s_search">
+            <div class="s_searchl"> <a href="javascript:void(0)" class=""> <span> <em>全部</em> <i class="fa fa-caret-down"></i></span> </a>
+              <ul style="display:none;">
+                <li><a href="javascript:void(0)">房产</a></li>
+                <li><a href="javascript:void(0)">留学</a></li>
+                <li><a href="javascript:void(0)">移民</a></li>
+                <li><a href="javascript:void(0)">资讯</a></li>
+                <li><a href="javascript:void(0)">问答</a></li>
+                <li><a href="javascript:void(0)">方案</a></li>
+              </ul>
+              <select style="display:none;">
+                <option>全部</option>
+                <option>房产</option>
+                <option>留学</option>
+                <option>移民</option>
+                <option>资讯</option>
+                <option>问答</option>
+                <option>方案</option>
+              </select>
+            </div>
+            <div class="s_searchc2">
+              <input type="text" placeholder="搜索关键词..." datatype="*1-15">
+            </div>
+            <div class="s_searchr2">
+              <input type="submit" value="搜索" >
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="s_headr"> <a href="#"><img src="images/1_10.jpg" /></a> </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="nav">
+  <div class="row">
+    <div class="contaier1248">
+      <ul>
+        <li><a href="http://192.168.1.21:8001/2.0/" class="s_subs">首页</a></li>
+        <li><a href="#" class="s_sub">精选项目 <i class="fa fa-caret-down"></i></a></li>
+        <li><a href="http://192.168.1.21:8001/2.0/yimin.html" class="s_subs">评估方案</a></li>
+        <li><a href="#" class="s_subs">安全保障</a></li>
+        <li><a href="#" class="s_subs">找机构</a></li>
+        <li><a href="#" class="s_subs">活动沙龙</a></li>
+        <li><a href="#" class="s_subs">焦点话题</a></li>
+      </ul>
+      <div class="s_subnav" style="display:none;">
+        <div class="s_subnavcon">
+          <div class="s_subnavhead">
+            <div class="s_subnavtitle1 s_bottomOn"> <img src="images/f22.jpg" />
+              <p>海外房产</p>
+            </div>
+            <div class="s_subnavtitle2"> <img src="images/f33.jpg" />
+              <p>投资移民</p>
+            </div>
+            <div class="s_subnavtitle3"> <img src="images/f11.jpg" />
+              <p>海外留学</p>
+            </div>
+          </div>
+          <div class="s_subnavfoot">
+            <div class="s_subnavfoot1" style="display:;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外房产</p>
+                <p class="s_navfootlp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f2.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot2" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">投资移民</p>
+                <p class="s_navfootlp2">精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之路保驾护航。精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之精选全国40多家移民机构100余项目。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f3.jpg" /> </div>
+            </div>
+            <div class="s_subnavfoot3" style="display:none;">
+              <div class="s_navfootl">
+                <p class="s_navfootlp1">海外留学</p>
+                <p class="s_navfootlp2">网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。</p>
+                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+              <div class="s_navfootr"> <img src="images/f1.jpg" /> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_part1">
+      <div class="s_part1Head">
+        <div class="s_selectAll">全部</div>
+        <span class="s_part1HeadSpan"><i class="fa fa-angle-right"></i></span>
+        <div class="s_part1HeadDiv"><a href="javascript:void(0);" class="s_closeButton2">美国</a><a href="javascript:void(0);" class="s_closeButton"><i class="fa fa-times"></i></a></div>
+        <span class="s_part1HeadSpan"><i class="fa fa-angle-right"></i></span>
+        <div class="s_part1HeadDiv"><a href="javascript:void(0);" class="s_closeButton2">纽约</a><a href="javascript:void(0);" class="s_closeButton"><i class="fa fa-times"></i></a></div>
+      </div>
+      <div class="s_part1Foot">
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>国家：</span> </div>
+          <div class="s_part1FootListR"> <a href="javascript:void(0);" class="s_On">全部</a> <a href="javascript:void(0);">美国</a> <a href="javascript:void(0);">新加坡</a> <a href="javascript:void(0);">马来西亚</a> <a href="javascript:void(0);">澳洲</a> <a href="javascript:void(0);">新西兰</a> <a href="javascript:void(0);">英国</a> </div>
+        </div>
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>热门城市：</span> </div>
+          <div class="s_part1FootListR"> <a href="javascript:void(0);" class="s_On">全部</a> <a href="javascript:void(0);">纽约</a> <a href="javascript:void(0);">洛杉矶</a> <a href="javascript:void(0);">佛罗里达</a> <a href="javascript:void(0);">芝加哥</a> <a href="javascript:void(0);">休斯敦</a> <a href="javascript:void(0);">费城</a> <a href="javascript:void(0);">旧金山</a> <a href="javascript:void(0);">底特律</a> <a href="javascript:void(0);">波士顿</a> <a href="javascript:void(0);">西雅图</a> </div>
+        </div>
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>物业类型：</span> </div>
+          <div class="s_part1FootListR"> <a href="javascript:void(0);" class="s_On">全部</a> <a href="javascript:void(0);">联排别墅</a> <a href="javascript:void(0);">独栋别墅</a> <a href="javascript:void(0);">双拼别墅</a> <a href="javascript:void(0);">公寓</a> </div>
+        </div>
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>房屋户型：</span> </div>
+          <div class="s_part1FootListR"> <a href="javascript:void(0);" class="s_On">全部</a> <a href="javascript:void(0);">一房</a> <a href="javascript:void(0);">两房</a> <a href="javascript:void(0);">三房</a> <a href="javascript:void(0);">四房</a> <a href="javascript:void(0);">其他</a> </div>
+        </div>
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>总价(RMB)：</span> </div>
+          <div class="s_part1FootListR"> <a href="javascript:void(0);" class="s_On">全部</a> <a href="javascript:void(0);">200万以下</a> <a href="javascript:void(0);">200-300万</a> <a href="javascript:void(0);">300-400万</a> <a href="javascript:void(0);">400-500万</a> <a href="javascript:void(0);">500-1000万</a> <a href="javascript:void(0);">1000万以上</a>
+            <form class="demoform s_part1FootListRform1">
+              <input class="s_input" type="text" datatype="n">
+              <span>-</span>
+              <input class="s_input" type="text" datatype="n">
+              <input class="s_botton" type="submit" value="确定">
+            </form>
+          </div>
+        </div>
+        <div class="s_part1FootList">
+          <div class="s_part1FootListL"> <span>特色：</span> </div>
+          <div class="s_part1FootListR">
+            <form class="s_part1FootListRform2">
+              <label>
+                <input type="checkbox">
+                精装修</label>
+              <label>
+                <input type="checkbox">
+                交通便利</label>
+              <label>
+                <input type="checkbox">
+                纯住宅区</label>
+              <label>
+                <input type="checkbox">
+                投资房</label>
+              <label>
+                <input type="checkbox">
+                学区房</label>
+              <label>
+                <input type="checkbox">
+                繁华商圈</label>
+              <label>
+                <input type="checkbox">
+                地铁/轻轨</label>
+              <label>
+                <input type="checkbox">
+                现房</label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="s_part2">
+      <div class="s_part2Left">
+        <div class="s_part2LeftHead">
+          <div class="s_part2LeftHeadT">
+            <div class="s_floatLeft"> <a href="javascript:void(0);" class="s_On">精选推荐<i class="fa fa-caret-down fa-2x s_On1" style="display:block;"></i></a> <a href="javascript:void(0);">按总价排序<i class="fa fa-arrow-up"></i><i class="fa fa-caret-down fa-2x s_On1" style="display:none;"></i></a> <a href="javascript:void(0);">按面积排序<i class="fa fa-arrow-up"></i><i class="fa fa-caret-down fa-2x s_On1" style="display:none;"></i></a> </div>
+            <div class="s_floatRight"> <a href="javascript:void(0);" class="s_On"><i class="fa fa-camera"></i>地图模式</a> <a href="javascript:void(0);"><i class="fa fa-list"></i>列表模式</a> </div>
+          </div>
+        </div>
+        <div class="s_part2LeftFoot">
+          <div class="s_part2LeftFootT">
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> 
+                  <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div>
+                  
+                 </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_part2LeftList">
+              <div class="s_part2LeftListC">
+                <div class="s_part2LeftListImg"> <a href="#"><img src="images/fcList/img1.jpg" /></a>
+                  <div class="s_part2LeftListImgT"> </div>
+                  <div class="s_part2LeftListImgT1"> <div><img src="images/fcList/4.jpg" /></div>
+                  <div><span class="s_1">国浩房地产集团</span><span class="s_2">物业编号：LX441323</span></div> </div>
+                </div>
+                <div class="s_part2LeftListCont">
+                  <div class="s_part2LeftListCont1">
+                    <div class="s_part2LeftListCont11"><a href="#">Verdana（维丹娜）</a></div>
+                    <div class="s_part2LeftListCont12">MAL：0.96万/㎡≈<span class="fz20 cRed-d30f1b">RMB:</span><span class="fz18 cRed-d30f1b">1.82万/</span><span class="fz14 cRed-d30f1b">㎡</span><a href="javascript:void(0);"><img src="images/fcList/1.jpg" /></a></div>
+                  </div>
+                  <div class="s_part2LeftListCont2">
+                    <div><img src="images/fcList/21.jpg" />位置：马来西亚 吉隆坡</div>
+                    <div><img src="images/fcList/22.jpg" />特色：投资房  学区房</div>
+                    <div><img src="images/fcList/23.jpg" />物业类型：公寓</div>
+                    <div><img src="images/fcList/24.jpg" />户型：一房、两房、三房</div>
+                    <div><img src="images/fcList/25.jpg" />面积：100㎡—200㎡</div>
+                  </div>
+                  <div class="s_part2LeftListCont3">
+                    <p>简介：克莱蒙公馆项目是新加坡国浩房地产集团投资开发的高端住宅，由美国知名建筑事务所操刀设计，
+                      楼高290米，64层，是新加坡第一空中豪宅。</p>
+                  </div>
+                  <div class="s_part2LeftListCont4">
+                    <div class="s_part2LeftListCont41"><i class="fa fa-star"></i><span class="cRed-d30f1b">98</span>人已收藏</div>
+                    <div class="s_part2LeftListCont42"><img src="images/fcList/3.jpg" /><span class="cRed-d30f1b fz14">400-998-8299 转 10005665</span></div>
+                    <div class="s_part2LeftListCont43"><a href="#">加入对比</a><a href="#" class="s_On">评估报告</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s_part2LeftFootF">
+            <div class="cRed-d30f1b fz14" style="text-align:right; line-height:36px;">共有180套房源</div>
+            <div class="s_part2LeftFootFPage"> <a href="#" class="s_On">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><span>…</span><a href="#">12</a><a href="#">13</a><a href="#" style="width:80px;">下一页</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="s_part2Right">
+        <div class="s_part2RightC">
+          <div class="s_part2Right1"> <a href="#"><img src="images/fcList/5.jpg" /></a> </div>
+          <div class="s_part2Right2">
+            <div class="s_part2Right2H"> <span>热门地区</span> </div>
+            <div class="s_part2Right2F"> <a href="#">纽约</a><a href="#">旧金山</a><a href="#">伦敦</a><a href="#">吉隆坡</a><a href="#">悉尼</a><a href="#">墨尔本</a><a href="#">奥克兰</a> <a href="#">洛杉矶</a><a href="#">芝加哥</a><a href="#">武吉知马</a><a href="#">布里斯班</a><a href="#">惠灵顿</a><a href="#">乌节路</a><a href="#">爱丁堡</a><a href="#">西雅图</a><a href="#">新山</a><a href="#">满家乐</a> </div>
+          </div>
+          <div class="s_part2Right3">
+            <div class="s_part2Right3H"> <span>热门房产</span> </div>
+            <div class="s_part2Right3F">
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/61.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">顶冠</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">葡萄牙</a></span> <span><a href="#">里斯本</a></span> <span><a href="#">联排别墅</a></span> </div>
+                </div>
+              </div>
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/62.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">禧林苑</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">新加坡</a></span> <span><a href="#">乌节路</a></span> <span><a href="#">公寓</a></span> </div>
+                </div>
+              </div>
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/63.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">纳森华庭</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">新加坡</a></span> <span><a href="#">第10邮区</a></span> <span><a href="#">公寓</a></span> </div>
+                </div>
+              </div>
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/64.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">东方公寓</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">新西兰</a></span> <span><a href="#">奥克兰</a></span> <span><a href="#">独栋别墅</a></span> </div>
+                </div>
+              </div>
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/65.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">Habitat公寓</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">澳大利亚</a></span> <span><a href="#">悉尼</a></span> <span><a href="#">公寓</a></span> </div>
+                </div>
+              </div>
+              <div class="s_part2Right3FDiv"> <a href="#"><img src="images/fcList/66.jpg" class="noLazy" /></a>
+                <div class="s_part2Right3FDiv1"></div>
+                <div class="s_part2Right3FDiv2">
+                  <div class="s_part2Right3FDiv21"><span><a href="#">莱德花园</a></span></div>
+                  <div class="s_part2Right3FDiv22"> <span><a href="#">葡萄牙</a></span> <span><a href="#">里斯本</a></span> <span><a href="#">公寓</a></span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s_part2Right4">
+            <div class="s_part2Right4H"> <span>房产置业指南</span> </div>
+            <div class="s_part2Right4F">
+              <ul>
+                <li><a href="#">新加坡二手房产购买注意事项</a></li>
+                <li><a href="#">新加坡房产类型解读</a></li>
+                <li><a href="#">新加坡房产制度有什么特点</a></li>
+                <li><a href="#">马来西亚第二家园条件详解</a></li>
+                <li><a href="#">投资澳洲房产20个常见问题解答</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="row">
+  <div class="contaier1248">
+    <div class="fz30 cColor-313131 s_lp">楼评</div>
+  </div>
+</div>
+<div class="row">
+  <div class="contaier1248 s_lpImgContent">
+    <div class="s_lpImgL"><a href="javascript:MoveLeft();"><img src="images/fcList/l.png" class="noLazy" /></a></div>
+    <div class="s_lpImgR"><a href="javascript:MoveRight();"><img src="images/fcList/r.png" class="noLazy" /></a></div>
+    
+      
+    <div class="s_lpImgC">
+      <div class="s_lpImgCBox">
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/71.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>很多网友看到“亿万富翁”、“投资移民”字眼，顿时血压升高，情绪激动，口诛笔伐方芳</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/72.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>少数富豪移民可能确实因为财富来得不干净，害怕东窗事发，以移民为退路。而且，有一些国家。</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/73.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>很从这个定义可以看出，投资移民说到底还是投资，投进去资金，有的是为了赚取利润上的回报。</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/74.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>资本的本性是逐利的，哪里能赚钱，就会往哪里去，现在是经济全球化的时代，全球就是一个大市场。</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/71.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>很多网友看到“亿万富翁”、“投资移民”字眼，顿时血压升高，情绪激动，口诛笔伐方芳</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/72.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>少数富豪移民可能确实因为财富来得不干净，害怕东窗事发，以移民为退路。而且，有一些国家。</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/73.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>很从这个定义可以看出，投资移民说到底还是投资，投进去资金，有的是为了赚取利润上的回报。</p>
+          </div>
+        </div>
+        <div class="s_lpImgBox">
+          <div class="s_lpImgBoxH"> <img src="images/fcList/74.jpg" class="noLazy" /> </div>
+          <div class="s_lpImgBoxF">
+            <p>资本的本性是逐利的，哪里能赚钱，就会往哪里去，现在是经济全球化的时代，全球就是一个大市场。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    
+  </div>
+</div>
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!---------------------------------------------------------------------------->
+
+<div class="s_footer">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="s_footHead">
+        <div class="s_footLeft">
+          <p class="s_footTitle">关于华人天下</p>
+          <p class="s_footContent" style="text-indent:28px;"> 华人天下网是国内首家集海外房产、海外移民、海外留学的海外投资第三方客观服务平台，在这里，您将能就您感兴趣的任意项目，获得来自第三方权威评估机构的免费评估服务，及自身投资条件客观评估及免费方案制定服务，您还可通过本平台，实现海外投资安全监管服务，最大限度保障您的投资安全。</p>
+        </div>
+        <div class="s_footCenter">
+          <p class="s_footTitle">服务热线</p>
+          <p class="s_footContent"> <img src="images/ph.jpg" /> </p>
+        </div>
+        <div class="s_footRight">
+          <p class="s_footTitle">掌上投资联盟</p>
+          <p class="s_footContent"> <img src="images/wx.jpg" /> <img src="images/wx.jpg" /> <span class="s_footWX">实时服务，<br />
+            随时随地获取最新消息</span> </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="s_footer2">
+  <div class="row">
+    <div class="contaier1248">
+      <div class="row height30"></div>
+      <div class="row">
+        <div class="s_footer2a"> <a href="#">关于我们</a> <a href="#">联系我们</a> <a href="#">媒体报道</a> <a href="#">海外动态</a><a href="#">友情链接</a><a href="#">帮助中心</a> <a href="#">意见反馈</a> <a href="#">法律申明</a><a href="#">加入我们</a><a href="#">网站地图</a> </div>
+      </div>
+      <div class="s_footer2b"> ©2013 - 2014 <span>深圳华人天下国际传媒有限公司</span> 版权所有 </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

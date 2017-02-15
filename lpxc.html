@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/lpxc.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/lpxc.js"></script>
+<script src="js/Validform_v5.3.2_min.js"></script>
+<script src="js/jquery.vticker.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+<style>
+.Validform_checktip { margin-left: 8px; line-height: 20px; height: 20px; overflow: hidden; color: #999; font-size: 12px; }
+.Validform_right { color: #71b83d; padding-left: 20px; background: url(images/formImg/right.png) no-repeat left center; }
+.Validform_wrong { color: red; padding-left: 20px; white-space: nowrap; background: url(images/formImg/error.png) no-repeat left center; }
+.Validform_loading { padding-left: 20px; background: url(images/formImg/onLoad.gif) no-repeat left center; }
+.Validform_error { }
+#Validform_msg { color: #7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width: 280px; -webkit-box-shadow: 2px 2px 3px #aaa; -moz-box-shadow: 2px 2px 3px #aaa; background: #fff; position: absolute; top: 0px; right: 50px; z- index:99999;
+display: none; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe { position: absolute; left: 0px; top: -1px; z-index: -1; }
+#Validform_msg .Validform_title { line-height: 25px; height: 25px; text-align: left; font-weight: bold; padding: 0 8px; color: #fff; position: relative; background-color: #000; }
+#Validform_msg a.Validform_close:link, #Validform_msg a.Validform_close:visited { line-height: 22px; position: absolute; right: 8px; top: 0px; color: #fff; text-decoration: none; }
+#Validform_msg a.Validform_close:hover { color: #cc0; }
+#Validform_msg .Validform_info { padding: 8px; border: 1px solid #000; border-top: none; text-align: left; }
+</style>
+</head>
+<body>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!---------------------------------------------------------------------------->
+<div class="nav">
+    <div class="row">
+        <div class="contaier1248">
+            <ul>
+                <a href="/" class="s_logo"><img src="images/fc1/logo.jpg" /></a>
+                <li><a href="http://192.168.1.21:8001/2.0/" class="s_subs ">首页</a></li>
+                <li><a href="#" class="s_sub">精选项目 <i class="fa fa-caret-down"></i></a></li>
+                <li><a href="http://192.168.1.21:8001/2.0/yimin.html" class="s_subs">评估方案</a></li>
+                <li><a href="#" class="s_subs">安全保障</a></li>
+                <li><a href="#" class="s_subs">找机构</a></li>
+                <li><a href="#" class="s_subs">活动沙龙</a></li>
+                <li><a href="#" class="s_subs">焦点话题</a></li>
+            </ul>
+            <div class="s_subnav" style="display:none;">
+                <div class="s_subnavcon">
+                    <div class="s_subnavhead">
+                        <div class="s_subnavtitle1 s_bottomOn"> <img src="images/f22.jpg" />
+                            <p>海外房产</p>
+                        </div>
+                        <div class="s_subnavtitle2"> <img src="images/f33.jpg" />
+                            <p>投资移民</p>
+                        </div>
+                        <div class="s_subnavtitle3"> <img src="images/f11.jpg" />
+                            <p>海外留学</p>
+                        </div>
+                    </div>
+                    <div class="s_subnavfoot">
+                        <div class="s_subnavfoot1" style="display:;">
+                            <div class="s_navfootl">
+                                <p class="s_navfootlp1">海外房产</p>
+                                <p class="s_navfootlp2">马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。马来西亚、新加坡、澳洲、美国等各国著名开发商旗下精选房源信息，不定期组织第三方机构、投资者进行实地考察，为投资者反馈最新评估依据。</p>
+                                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+                            <div class="s_navfootr"> <img src="images/f2.jpg" /> </div>
+                        </div>
+                        <div class="s_subnavfoot2" style="display:none;">
+                            <div class="s_navfootl">
+                                <p class="s_navfootlp1">投资移民</p>
+                                <p class="s_navfootlp2">精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之路保驾护航。精选全国40多家移民机构100余项目，提供第三方机构详尽项目评估报告，扫除盲点，搭建投资金融联盟，为移民之精选全国40多家移民机构100余项目。</p>
+                                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+                            <div class="s_navfootr"> <img src="images/f3.jpg" /> </div>
+                        </div>
+                        <div class="s_subnavfoot3" style="display:none;">
+                            <div class="s_navfootl">
+                                <p class="s_navfootlp1">海外留学</p>
+                                <p class="s_navfootlp2">网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。网罗全球上百家知名院校及各国各专业排行榜院校，通过第三方机构实地信息反馈，从申请条件、流程、优势专业、环境等全方位助您了解、选择理想院校。</p>
+                                <a href="#" class="s_navfootlbtn">了解更多</a> </div>
+                            <div class="s_navfootr"> <img src="images/f1.jpg" /> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!---------------------------------------------------------------------------->
+<div class="s_head">
+    <div class="row">
+        <div class="contaier1248">
+            <div class="s_head1"></div>
+            <div class="s_head2">
+                <div class="s_headl"> <a href="#">精选房源</a><span>></span><a href="#">新加坡房源</a><span>></span><a href="#">20邮区</a><span>></span><a href="#">Sky Habitat （晴宇）</a> </div>
+                <div class="s_headc">
+                    <form class="demoform">
+                        <div class="s_search">
+                            <div class="s_searchl"> <a href="javascript:void(0)" class=""> <span> <em>全部</em> <i class="fa fa-caret-down"></i></span> </a>
+                                <ul style="display:none;">
+                                    <li><a href="javascript:void(0)">房产</a></li>
+                                    <li><a href="javascript:void(0)">留学</a></li>
+                                    <li><a href="javascript:void(0)">移民</a></li>
+                                    <li><a href="javascript:void(0)">资讯</a></li>
+                                    <li><a href="javascript:void(0)">问答</a></li>
+                                    <li><a href="javascript:void(0)">方案</a></li>
+                                </ul>
+                                <select style="display:none;">
+                                    <option>全部</option>
+                                    <option>房产</option>
+                                    <option>留学</option>
+                                    <option>移民</option>
+                                    <option>资讯</option>
+                                    <option>问答</option>
+                                    <option>方案</option>
+                                </select>
+                            </div>
+                            <div class="s_searchc">
+                                <input type="text" placeholder="搜索关键词..." datatype="*1-15">
+                            </div>
+                            <div class="s_searchr">
+                                <input type="submit" value="搜索" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="s_bigTitB">
+    <div class="row">
+        <div class="contaier1248">
+            <div class="s_bigTit">
+                <div class="s_bigTitC">
+                    <div class="s_bigTit1"> <img src="images/fc1/12.jpg" /> </div>
+                    <div class="s_bigTit2">
+                        <p><a href="#">Sky Habitat （晴宇）</a></p>
+                        <div>学区房</div>
+                        <div>地铁房</div>
+                        <div>繁华商圈</div>
+                    </div>
+                    <div class="s_bigTit4"> <img src="images/fc1/11.jpg" /> </div>
+                    <div class="s_bigTit3">
+                        <p class="s_bigTit31">扫一扫</p>
+                        <p>立刻访问移动端页面</p>
+                    </div>
+                </div>
+            </div>
+            <div class="s_bigNav">
+                <ul>
+                    <li><a href="#">楼盘首页</a></li>
+                    <li><a href="#">楼盘详情</a></li>
+                    <li><a href="#" class="s_on">楼盘相册</a></li>
+                    <li><a href="#">价格走势</a></li>
+                    <li><a href="#">全景图</a></li>
+                    <li><a href="#">周边配套</a></li>
+                    <li><a href="#">楼盘动态</a></li>
+                    <li><a href="#">楼盘点评</a></li>
+                    <li><a href="#">论坛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="contaier1248">
+            <div class="s_subNav">
+                <div class="s_subNavDiv"><a href="#">全部【48张】</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">实景图（28张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">外景图（10张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">位置图（1张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">户型图（5张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">平面图（暂无）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">全景图（1张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">周边环境（3张）</a></div>
+                <span> ︳ </span>
+                <div class="s_subNavDiv"><a href="#">规划图（暂无）</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">实景图<span>【28张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">外景图<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">位置图<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">户型图<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">平面图<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">全景图<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="contaier1248">
+    	<div class="s_H1">周边环境<span>【10张】</span></div>
+    </div>
+</div>
+<div class="row">
+	<div class="contaier1248">
+    <div class="s_photoBox">
+    <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>
+     <div class="s_photoB">
+    	<div class="s_photo">
+        	<a href="#"><img src="images/lpxc/22.jpg" /></a>
+        </div>
+        <div class="s_text">Sky Habitat (晴宇)</div>
+     </div>   
+    </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+<div class="row">
+	<div class="contaier1248">
+    	<div class="height30"></div>
+    </div>
+</div>
+<!---------------------------------------------------------------------------->
+
+<div class="row">
+    <div class="contaier1248">
+        <div class="s_3">猜您喜欢</div>
+        <div class="s_4">
+            <div class="s_4con">
+                <div class="s_41">
+                    <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+                    <div class="s_412">
+                        <div class="s_4121"><a href="#">Habitat公寓</a></div>
+                        <div class="s_4122"><span>8</span>万元/㎡</div>
+                    </div>
+                </div>
+                <div class="s_41">
+                    <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+                    <div class="s_412">
+                        <div class="s_4121"><a href="#">Habitat公寓</a></div>
+                        <div class="s_4122"><span>8</span>万元/㎡</div>
+                    </div>
+                </div>
+                <div class="s_41">
+                    <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+                    <div class="s_412">
+                        <div class="s_4121"><a href="#">Habitat公寓</a></div>
+                        <div class="s_4122"><span>8</span>万元/㎡</div>
+                    </div>
+                </div>
+                <div class="s_41">
+                    <div class="s_411"><a href="#"><img src="images/dt/1.jpg" /></a></div>
+                    <div class="s_412">
+                        <div class="s_4121"><a href="#">Habitat公寓</a></div>
+                        <div class="s_4122"><span>8</span>万元/㎡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!----------------------------------------------------------------------------> 
+
+<!---------------------------------------------------------------------------->
+
+<div class="s_footer">
+    <div class="row">
+        <div class="contaier1248">
+            <div class="s_friendLink">
+                <p class="s_footTitle">免责声明</p>
+                <p class="s_footTitle1">本页面旨在为广大用户提供更多信息的无偿服务，所有信息均由开发商或代理机构提供，并由第三方评估机构进行安全评估，本站内所有内容并不表明网站之观点或意见，仅供参考和借鉴，投资者在购房时仍需慎重
+                    考虑。投资者在购房交易时所造成的任何后果与本网站无关，当政府司法机关依照法定程序要求本网站披露个人资料时，我们将根据执法单位之要求或为公共安全之目的提供个人资料。在此情况下之任何免责。本页面多
+                    提到项目面积如无特别表示，均指建筑面积。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------------------------------------->
+<div class="s_footer2">
+    <div class="row">
+        <div class="contaier1248">
+            <div class="row height30"></div>
+            <div class="row">
+                <div class="s_footer2a"> <a href="#">关于我们</a> <a href="#">联系我们</a> <a href="#">媒体报道</a> <a href="#">海外动态</a><a href="#">友情链接</a><a href="#">帮助中心</a> <a href="#">意见反馈</a> <a href="#">法律申明</a><a href="#">加入我们</a><a href="#">网站地图</a> </div>
+            </div>
+            <div class="s_footer2b"> ©2013 - 2014 <span>深圳华人天下国际传媒有限公司</span> 版权所有<br />
+                海外投资第一平台  华人天下网 <span>粤ICP备14001988号-1</span> </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
